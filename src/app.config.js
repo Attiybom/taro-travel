@@ -14,8 +14,8 @@ export default defineAppConfig({
    * @description tabBar => 底部导航栏
    */
   tabBar: {
-    color: "#68bffb", // 默认颜色
-    selectedColor: "#279846",
+    color: "#7F8389", // 默认颜色
+    selectedColor: "#07c160",
     borderStyle: "black",
     backgroundColor: "#fff",
     list: [
@@ -39,4 +39,6 @@ export default defineAppConfig({
       desc: "为了更好的服务体验，我们希望获取你的位置",
     },
   },
+  // 解决bug: routeDone with a webviewId
+  lazyCodeLoading: "requiredComponents",
 });
