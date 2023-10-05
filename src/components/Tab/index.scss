@@ -12,8 +12,8 @@
     font-size: 32px;
     position: relative;
     &.active {
-      // color: #{$primaryColor};
-      background: -webkit-linear-gradient(top, #0066e6, #0075f4);
+      color: #{$primaryColor};
+      // background: -webkit-linear-gradient(top, #0066e6, #0075f4);
       font-weight: 600;
     }
   }
