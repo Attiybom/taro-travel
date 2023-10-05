@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import "./index.scss";
-import { View } from "@tarojs/components";
+import { View, Swiper } from "@tarojs/components";
 
 export default function TabContent({
   className = "",
   tabList = [],
   initTab = "",
   onTabClick = null,
+  children = [],
 }) {
   const [currentId, setCurrentId] = useState(0);
 
@@ -24,9 +25,17 @@ export default function TabContent({
     transform: `translateX(${currentId * 100}%)`,
   };
 
+  // 选项卡滑动
   function handleClick(id) {
     setCurrentId(id);
     onTabClick(id);
+  }
+
+  // 选项卡内容容器滑动
+  function handleSwiperChange(e) {
+    // console.log("e", e);
+    const id = e.detail.current;
+    handleClick(id);
   }
 
   return (
@@ -41,10 +50,16 @@ export default function TabContent({
             {tab.label}
           </View>
         ))}
+        {/* 下划线 */}
+        <View className="scroll-bar" style={innerStyle}></View>
       </View>
-
-      {/* 下划线 */}
-      <View className="scroll-bar" style={innerStyle}></View>
+      <Swiper
+        current={currentId}
+        className="tab-content"
+        onChange={handleSwiperChange}
+      >
+        {children}
+      </Swiper>
     </View>
   );
 }

@@ -1,4 +1,4 @@
-import { View } from "@tarojs/components";
+import { View, SwiperItem } from "@tarojs/components";
 import "./index.scss";
 
 // 组件
@@ -21,9 +21,8 @@ const INIT_TABS = [
 ];
 
 export default function FlightContent() {
-
   function handleTabClick(id) {
-    console.log('id', id)
+    console.log("id", id);
   }
 
   return (
@@ -32,7 +31,15 @@ export default function FlightContent() {
         <TabContent
           tabList={INIT_TABS}
           onTabClick={handleTabClick}
-        ></TabContent>
+          className="flight-index-tab"
+        >
+          {/* 选项卡内容-插槽 */}
+          {/* 测试app.scss 全局样式*/
+          /* <SwiperItem className="color-red">111</SwiperItem> */}
+          <SwiperItem>111</SwiperItem>
+          <SwiperItem>22</SwiperItem>
+          <SwiperItem>33</SwiperItem>
+        </TabContent>
       </View>
     </View>
   );
