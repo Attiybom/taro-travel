@@ -92,8 +92,8 @@
   }
 
   .search-btn {
-    // background: #{$primaryColor};
-    background: -webkit-linear-gradient(top, #0066e6, #0075f4);
+    background: #{$primaryColor};
+    // background: -webkit-linear-gradient(top, #0066e6, #0075f4);
     height: 88px;
     line-height: 88px;
     color: #fff;

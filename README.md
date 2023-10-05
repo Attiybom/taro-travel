@@ -14,3 +14,15 @@ Error: module 'vendors-node_modules_taro_weapp_prebundle_react-dom_js.js' is not
     // 改后
     compiler: { type: "webpack5", prebundle: { enable: false } },
 ```
+
+# 全局样式设置
+## 方式一
+1. config 文件夹下的index文件
+2. baseConfig 对象中 添加sass 对象设置
+```js
+    sass: {
+      // 设置全局样式变量
+      data: `$primaryColor: '#0080ff';`,
+    },
+```
+3. 重新配置
