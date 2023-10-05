@@ -29,7 +29,10 @@ export default function FlightContent() {
   return (
     <View className="flight-container">
       <View className="flight-top">
-        <TabContent tabList={INIT_TABS} onTabClick={() => handleTabClick(id)}></TabContent>
+        <TabContent
+          tabList={INIT_TABS}
+          onTabClick={handleTabClick}
+        ></TabContent>
       </View>
     </View>
   );

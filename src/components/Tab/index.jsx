@@ -35,7 +35,7 @@ export default function TabContent({
         {tabList?.map((tab) => (
           <View
             key={tab.id}
-            className="tab-item"
+            className={`tab-item ${currentId === tab.id ? "active" : ""}`}
             onClick={() => handleClick(tab.id)}
           >
             {tab.label}
