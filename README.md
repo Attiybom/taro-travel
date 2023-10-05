@@ -16,7 +16,7 @@ Error: module 'vendors-node_modules_taro_weapp_prebundle_react-dom_js.js' is not
 ```
 
 # 全局样式设置
-## 方式一
+## 方式一: webpack（config文件夹）中设置
 1. config 文件夹下的index文件
 2. baseConfig 对象中 添加sass 对象设置
 ```js
@@ -26,3 +26,5 @@ Error: module 'vendors-node_modules_taro_weapp_prebundle_react-dom_js.js' is not
     },
 ```
 3. 重新配置
+
+## 方式二: app.scss 文件中设置
