@@ -1,6 +1,9 @@
 import { View, SwiperItem, Swiper, Image } from "@tarojs/components";
 import "./index.scss";
 
+// 第三方库
+// import dayjs from 'dayjs'
+
 // 组件
 import TabContent from "../../../components/Tab";
 import NoExploit from "../../../components/NoExploit";
@@ -43,7 +46,10 @@ export default function FlightContent() {
           {/* 选项卡内容-插槽 */}
           {/* 测试app.scss 全局样式*/
           /* <SwiperItem className="color-red">111</SwiperItem> */}
-          <SwiperItem></SwiperItem>
+          <SwiperItem>
+
+
+          </SwiperItem>
           <SwiperItem>
             <NoExploit className="no-data"></NoExploit>
           </SwiperItem>
