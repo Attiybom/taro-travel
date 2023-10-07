@@ -25,7 +25,7 @@ const INIT_TABS = [
 ];
 
 // 图片mock
-const MOCK_IMG = [
+export const MOCK_IMG = [
   `https://th.bing.com/th?id=OIP.Chh6O-1fhahYH0uBytAD9gHaE7&w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2`,
   `https://th.bing.com/th?id=OIP.rNIcMY3-JcKsSLcZztIhPAHaE7&w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2`,
 ];
