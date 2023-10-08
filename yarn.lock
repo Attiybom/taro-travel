@@ -3045,11 +3045,6 @@ ajv@^8.0.0, ajv@^8.0.1, ajv@^8.9.0:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-amdefine@>=0.0.4:
-  version "1.0.1"
-  resolved "https://registry.npmmirror.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
-  integrity sha512-S2Hw0TtNkMJhIabBwIojKL9YHO5T0n5eNqWJ7Lrlel/zDbftQpxpapi8tZs3X1HWa+u+QeydGmzzNU0m09+Rcg==
-
 ansi-align@^3.0.0:
   version "3.0.1"
   resolved "https://registry.npmmirror.com/ansi-align/-/ansi-align-3.0.1.tgz#0cdf12e111ace773a86e9a1fad1225c43cb19a59"
@@ -3282,11 +3277,6 @@ async@^3.2.3:
   version "3.2.4"
   resolved "https://registry.npmmirror.com/async/-/async-3.2.4.tgz#2d22e00f8cddeb5fde5dd33522b56d1cf569a81c"
   integrity sha512-iAB+JbDEGXhyIUavoDl9WP/Jj106Kz9DEn1DPgYw5ruDn0e3Wgi3sKFm55sASdGBNOQB8F59d9qQ7deqrHA8wQ==
-
-async@~0.2.6:
-  version "0.2.10"
-  resolved "https://registry.npmmirror.com/async/-/async-0.2.10.tgz#b6bbe0b0674b9d719708ca38de8c237cb526c3d1"
-  integrity sha512-eAkdoKxU6/LkKDBzLpT+t6Ff5EtfSF4wx1WfJiPEEV7WNLnDaRXk0oVysiEPm262roaachGexwUv94WhSgN5TQ==
 
 asynciterator.prototype@^1.0.0:
   version "1.0.0"
@@ -9157,13 +9147,6 @@ open@^8.0.9:
     is-docker "^2.1.1"
     is-wsl "^2.2.0"
 
-optimist@~0.3.5:
-  version "0.3.7"
-  resolved "https://registry.npmmirror.com/optimist/-/optimist-0.3.7.tgz#c90941ad59e4273328923074d2cf2e7cbc6ec0d9"
-  integrity sha512-TCx0dXQzVtSCg2OgY/bO9hjM9cV4XYx09TVK+s3+FhkjT6LovsLe+pPMzpWf+6yXK/hUizs2gUoTw3jHM0VaTQ==
-  dependencies:
-    wordwrap "~0.0.2"
-
 optionator@^0.9.1, optionator@^0.9.3:
   version "0.9.3"
   resolved "https://registry.npmmirror.com/optionator/-/optionator-0.9.3.tgz#007397d44ed1872fdc6ed31360190f81814e2c64"
@@ -10291,7 +10274,7 @@ replace-ext@^1.0.0:
   resolved "https://registry.npmmirror.com/replace-ext/-/replace-ext-1.0.1.tgz#2d6d996d04a15855d967443631dd5f77825b016a"
   integrity sha512-yD5BHCe7quCgBph4rMQ+0KkIRKwWCrHDOX1p1Gp6HwjPM5kVoCdKGNhN7ydqqsX6lJEnQDKZ/tFMiEdQ1dvPEw==
 
-request@^2.88.0:
+request@^2.88.0, request@^2.88.2:
   version "2.88.2"
   resolved "https://registry.npmmirror.com/request/-/request-2.88.2.tgz#d73c918731cb5a87da047e207234146f664d12b3"
   integrity sha512-MsvtOrfG9ZcrOwAW+Qi+F6HbD0CWXEh9ou77uOb7FM2WPhwT7smM833PzanhJLsgXjN89Ir6V2PczXNnMpwKhw==
@@ -10331,14 +10314,6 @@ require-package-name@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmmirror.com/require-package-name/-/require-package-name-2.0.1.tgz#c11e97276b65b8e2923f75dabf5fb2ef0c3841b9"
   integrity sha512-uuoJ1hU/k6M0779t3VMVIYpb2VMJk05cehCaABFhXaibcbvfgR8wKiozLjVFSzJPmQMRqIcO0HMyTFqfV09V6Q==
-
-require@^2.4.20:
-  version "2.4.20"
-  resolved "https://registry.npmmirror.com/require/-/require-2.4.20.tgz#66cb6baaabb65de8a71d793f5c65fd184f3798b6"
-  integrity sha512-7eop5rvh38qhQQQOoUyf68meVIcxT2yFySNywTbxoEECgkX4KDqqDRaEszfvFnuB3fuZVjDdJZ1TI/Esr16RRA==
-  dependencies:
-    std "0.1.40"
-    uglify-js "2.3.0"
 
 requires-port@^1.0.0:
   version "1.0.0"
@@ -10922,13 +10897,6 @@ source-map@^0.7.3:
   resolved "https://registry.npmmirror.com/source-map/-/source-map-0.7.4.tgz#a9bbe705c9d8846f4e08ff6765acf0f1b0898656"
   integrity sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==
 
-source-map@~0.1.7:
-  version "0.1.43"
-  resolved "https://registry.npmmirror.com/source-map/-/source-map-0.1.43.tgz#c24bc146ca517c1471f5dacbe2571b2b7f9e3346"
-  integrity sha512-VtCvB9SIQhk3aF6h+N85EaqIaBFIAfZ9Cu+NJHHVvc8BbEcnvDcFw6sqQ2dQrT6SlOrZq3tIvyD9+EGq/lJryQ==
-  dependencies:
-    amdefine ">=0.0.4"
-
 spdx-correct@^3.0.0:
   version "3.2.0"
   resolved "https://registry.npmmirror.com/spdx-correct/-/spdx-correct-3.2.0.tgz#4f5ab0668f0059e34f9c00dce331784a12de4e9c"
@@ -11044,11 +11012,6 @@ std-env@^3.0.1:
   version "3.4.3"
   resolved "https://registry.npmmirror.com/std-env/-/std-env-3.4.3.tgz#326f11db518db751c83fd58574f449b7c3060910"
   integrity sha512-f9aPhy8fYBuMN+sNfakZV18U39PbalgjXG3lLB9WkaYTxijru61wb57V9wxxNthXM5Sd88ETBWi29qLAsHO52Q==
-
-std@0.1.40:
-  version "0.1.40"
-  resolved "https://registry.npmmirror.com/std/-/std-0.1.40.tgz#3678a5f65094d9e1b6b5e26edbfc0212b8342b71"
-  integrity sha512-wUf57hkDGCoVShrhPA8Q7lAg2Qosk+FaMlECmAsr1A4/rL2NRXFHQGBcgMUFKVkPEemJFW9gzjCQisRty14ohg==
 
 strict-uri-encode@^1.0.0:
   version "1.1.0"
@@ -11749,15 +11712,6 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-uglify-js@2.3.0:
-  version "2.3.0"
-  resolved "https://registry.npmmirror.com/uglify-js/-/uglify-js-2.3.0.tgz#2cdec16d378a8a2b6ecfb6989784cf8b7ae5491f"
-  integrity sha512-AQvbxRKdaQeYADywQaao0k8Tj+7NGEVTne6xwgX1yQpv/G8b0CKdIw70HkCptwfvNGDsVe+0Bng3U9hfWbxxfg==
-  dependencies:
-    async "~0.2.6"
-    optimist "~0.3.5"
-    source-map "~0.1.7"
-
 uglify-js@^3.5.1:
   version "3.17.4"
   resolved "https://registry.npmmirror.com/uglify-js/-/uglify-js-3.17.4.tgz#61678cf5fa3f5b7eb789bb345df29afb8257c22c"
@@ -12353,11 +12307,6 @@ widest-line@^3.1.0:
   integrity sha512-NsmoXalsWVDMGupxZ5R08ka9flZjjiLvHVAWYOKtiKM8ujtZWr9cRffak+uSE48+Ob8ObalXpwyeUiyDD6QFgg==
   dependencies:
     string-width "^4.0.0"
-
-wordwrap@~0.0.2:
-  version "0.0.3"
-  resolved "https://registry.npmmirror.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
-  integrity sha512-1tMA907+V4QmxV7dbRvb4/8MaRALK6q9Abid3ndMYnbyo8piisCmeONVqVSXqQA3KaP4SLt5b7ud6E2sqP8TFw==
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
   version "7.0.0"

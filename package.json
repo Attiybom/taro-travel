@@ -60,7 +60,7 @@
     "mysql2": "^3.6.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "require": "^2.4.20"
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",
