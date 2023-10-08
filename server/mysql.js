@@ -15,7 +15,7 @@ connection.connect((err) => {
     console.log("mysql-error:", err);
     return;
   }
-  console.log("mysql-linking...");
+  console.log("数据库链接成功！");
 });
 
 // 执行mysql查询命令

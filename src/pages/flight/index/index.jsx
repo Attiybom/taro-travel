@@ -8,6 +8,10 @@ import "./index.scss";
 import TabContent from "../../../components/Tab";
 import NoExploit from "../../../components/NoExploit";
 
+// api
+import { adsReq } from "@/common/api";
+import { useEffect, useState } from "react";
+
 // 默认值
 const INIT_TABS = [
   {
@@ -24,16 +28,24 @@ const INIT_TABS = [
   },
 ];
 
-// 图片mock
-export const MOCK_IMG = [
-  `https://th.bing.com/th?id=OIP.Chh6O-1fhahYH0uBytAD9gHaE7&w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2`,
-  `https://th.bing.com/th?id=OIP.rNIcMY3-JcKsSLcZztIhPAHaE7&w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2`,
-];
-
 export default function FlightContent() {
+
+  const [adList, setAdList] = useState([])
+
   function handleTabClick(id) {
     console.log("id", id);
   }
+
+  function getAds() {
+    adsReq().then((res) => {
+      console.log('getAds', res)
+      setAdList(res.result)
+    })
+  }
+
+  useEffect(() => {
+    getAds()
+  }, [])
 
   return (
     <View className="flight-container">
@@ -60,9 +72,9 @@ export default function FlightContent() {
       </View>
       {/* 图片轮播 */}
       <Swiper className="advs-banner-bd" autoplay>
-        {MOCK_IMG.map((img) => (
-          <SwiperItem key={img} className="item">
-            <Image className="img" src={img}></Image>
+        {adList.map((img) => (
+          <SwiperItem key={img.id} className="item">
+            <Image className="img" src={img.imgUrl}></Image>
           </SwiperItem>
         ))}
       </Swiper>

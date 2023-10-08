@@ -12,5 +12,5 @@ const models = require("./models");
 models(app);
 
 app.listen(3000, () => {
-  console.log("taro-express-server start!");
+  console.log("taro-express-server running in 3000");
 });
