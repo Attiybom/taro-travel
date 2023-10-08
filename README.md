@@ -28,3 +28,14 @@ Error: module 'vendors-node_modules_taro_weapp_prebundle_react-dom_js.js' is not
 3. 重新配置
 
 ## 方式二: app.scss 文件中设置
+```js
+// 配置
+// app.scss
+.color-red {
+  color: red;
+}
+
+// 使用
+// flight => tab => index
+<SwiperItem className="color-red">111</SwiperItem>
+```
