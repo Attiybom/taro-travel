@@ -28,7 +28,8 @@
     "dev:jd": "npm run build:jd -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch",
     "test": "jest",
-    "lint": "eslint --ext .js,.tsx,.ts,.jsx src"
+    "lint": "eslint --ext .js,.tsx,.ts,.jsx src",
+    "server": "nodemon ./server/index.js"
   },
   "browserslist": [
     "last 3 versions",
@@ -58,7 +59,8 @@
     "lint-staged": "^14.0.1",
     "mysql2": "^3.6.1",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "require": "^2.4.20"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",

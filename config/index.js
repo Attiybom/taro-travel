@@ -1,7 +1,8 @@
 import { defineConfig } from '@tarojs/cli'
+import path from "path";
 
-import devConfig from './dev'
-import prodConfig from './prod'
+import devConfig from "./dev";
+import prodConfig from "./prod";
 
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
 // eslint-disable-next-line no-unused-vars
@@ -32,6 +33,11 @@ export default defineConfig(async (merge, { command, mode }) => {
     sass: {
       // 设置全局样式变量
       data: `$primaryColor: '#0080ff';`,
+    },
+    alias: {
+      // 设置路径
+      "@/components": path.resolve(__dirname, "..", "src/components"),
+      "@/common": path.resolve(__dirname, "..", "src/common"),
     },
     mini: {
       postcss: {
@@ -89,10 +95,10 @@ export default defineConfig(async (merge, { command, mode }) => {
       },
     },
   };
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env.NODE_ENV === "development") {
     // 本地开发构建配置（不混淆压缩）
-    return merge({}, baseConfig, devConfig)
+    return merge({}, baseConfig, devConfig);
   }
   // 生产构建配置（默认开启压缩混淆等）
-  return merge({}, baseConfig, prodConfig)
-})
+  return merge({}, baseConfig, prodConfig);
+});
