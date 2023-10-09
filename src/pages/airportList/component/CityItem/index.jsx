@@ -8,7 +8,7 @@ export default function CityItem(props) {
   const { cityList, label } = props;
 
   return (
-    <View className="list-item">
+    <View className="list-item" id={label}>
       <Text className="label">{label}</Text>
       {cityList.map((item) => (
         <View

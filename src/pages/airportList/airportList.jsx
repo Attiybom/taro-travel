@@ -55,15 +55,24 @@ export default function AirportList() {
       });
   }
 
+  // 点击右侧字母表
+  const [currentLetter, setCurrentLetter] = useState("");
+  function handleClickLetter(letter) {
+    setCurrentLetter(letter);
+  }
+
   useEffect(() => {
-    console.log("eee");
     getAirportList();
-    console.log("letterList", letterList);
   }, []);
 
   return (
     <View className="airport-list-container">
-      <ScrollView scrollY scrollAnimationDuration style={{ height: `100vh` }}>
+      <ScrollView
+        scrollY
+        scrollAnimationDuration
+        style={{ height: `100vh` }}
+        scrollIntoView={currentLetter}
+      >
         {/* 左侧城市列表 */}
         {letterList.map((item) => {
           const cityList = cityListObj[item];
@@ -75,7 +84,11 @@ export default function AirportList() {
       {/* 右侧字母表 */}
       <View className="letter-container">
         {letterList.map((item) => (
-          <View className="letter-item" key={item}>
+          <View
+            onClick={() => handleClickLetter(item)}
+            className="letter-item"
+            key={item}
+          >
             {item}
           </View>
         ))}
