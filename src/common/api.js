@@ -9,3 +9,14 @@ export const adsReq = (data) =>
     url: `${API_PRE}/ads/advertising`,
     params: data,
   });
+
+/**
+ * @description 获取城市接口列表
+ */
+
+export const airportListReq = (data) => {
+  tools.request({
+    url: `${API_PRE}/city/airportList`,
+    params: data,
+  });
+};
