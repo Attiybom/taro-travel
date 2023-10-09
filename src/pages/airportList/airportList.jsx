@@ -12,6 +12,9 @@ import { airportListReq } from "@/common/api";
 //常量
 import { ERR_MSG } from "@/common/constant";
 
+//组件
+import CityItem from "./component/CityItem";
+
 export default function AirportList() {
   // 城市列表数据对象
   const [cityListObj, setCityListObj] = useState({});
@@ -61,15 +64,22 @@ export default function AirportList() {
   return (
     <View className="airport-list-container">
       <ScrollView scrollY scrollAnimationDuration style={{ height: `100vh` }}>
-        {/* 右侧字母表 */}
-        <View className="letter-container">
-          {letterList.map((item) => (
-            <View className="letter-item" key={item}>
-              {item}
-            </View>
-          ))}
-        </View>
+        {/* 左侧城市列表 */}
+        {letterList.map((item) => {
+          const cityList = cityListObj[item];
+          return (
+            <CityItem cityList={cityList} key={item} label={item}></CityItem>
+          );
+        })}
       </ScrollView>
+      {/* 右侧字母表 */}
+      <View className="letter-container">
+        {letterList.map((item) => (
+          <View className="letter-item" key={item}>
+            {item}
+          </View>
+        ))}
+      </View>
     </View>
   );
 }
