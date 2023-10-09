@@ -38,6 +38,19 @@ router.get("/airportList", async (req, res) => {
   const queryAirportSql = `select * from airport_list`;
   try {
     const result = await sqlQuery(queryAirportSql);
+
+    // 给城市数据按首字母排序
+    if (Array.isArray(result) && result.length) {
+      result.sort((x, y) => {
+        if (x.firstLetter > y.firstLetter) {
+          return 1;
+        } else if (x.firstLetter < y.firstLetter) {
+          return -1;
+        }
+        return 0;
+      });
+    }
+
     res.send({
       code: 1,
       msg: "请求成功",
