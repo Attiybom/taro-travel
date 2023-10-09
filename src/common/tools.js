@@ -54,6 +54,10 @@ const tools = {
     return Taro.showLoading(dptOpts);
   },
 
+  hideLoading: () => {
+    Taro.hideLoading();
+  },
+
   /**
    * @description 消息提示框
    */
