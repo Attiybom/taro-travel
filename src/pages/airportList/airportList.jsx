@@ -1,5 +1,5 @@
-import { View } from "@tarojs/components";
-import { useEffect } from "react";
+import { View, ScrollView } from "@tarojs/components";
+import { useEffect, useState } from "react";
 
 import tools from "@/common/tools";
 
@@ -13,11 +13,35 @@ import { airportListReq } from "@/common/api";
 import { ERR_MSG } from "@/common/constant";
 
 export default function AirportList() {
+  // 城市列表数据对象
+  const [cityListObj, setCityListObj] = useState({});
+  // 城市列表数据
+  const [letterList, setLetterList] = useState([]);
+
+  function formatList(list = []) {
+    const obj = {};
+    if (list?.length) {
+      list.forEach((item) => {
+        const { firstLetter } = item;
+        if (!obj[firstLetter]) {
+          obj[firstLetter] = [];
+        }
+        obj[firstLetter].push(item);
+      });
+    }
+    return obj;
+  }
+
+  // 获取城市列表数据
   function getAirportList() {
     airportListReq()
       .then((res) => {
         tools.showLoading();
-        console.log("airportListReq_res", res);
+        const { result } = res;
+        const listObj = formatList(result);
+        setCityListObj(listObj);
+        setLetterList(Object.keys(listObj));
+        // console.log("airportListReq_res", res);
       })
       .catch((err) => {
         tools.showToast(ERR_MSG);
@@ -31,7 +55,21 @@ export default function AirportList() {
   useEffect(() => {
     console.log("eee");
     getAirportList();
+    console.log("letterList", letterList);
   }, []);
 
-  return <View className="airport-list-container">城市列表</View>;
+  return (
+    <View className="airport-list-container">
+      <ScrollView scrollY scrollAnimationDuration style={{ height: `100vh` }}>
+        {/* 右侧字母表 */}
+        <View className="letter-container">
+          {letterList.map((item) => (
+            <View className="letter-item" key={item}>
+              {item}
+            </View>
+          ))}
+        </View>
+      </ScrollView>
+    </View>
+  );
 }

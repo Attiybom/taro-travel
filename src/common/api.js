@@ -14,9 +14,8 @@ export const adsReq = (data) =>
  * @description 获取城市接口列表
  */
 
-export const airportListReq = (data) => {
+export const airportListReq = (data) =>
   tools.request({
     url: `${API_PRE}/city/airportList`,
     params: data,
   });
-};
