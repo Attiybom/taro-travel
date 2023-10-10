@@ -39,3 +39,8 @@ Error: module 'vendors-node_modules_taro_weapp_prebundle_react-dom_js.js' is not
 // flight => tab => index
 <SwiperItem className="color-red">111</SwiperItem>
 ```
+
+# 全局状态管理
+* 库：dva.js
+* src/dva.js
+* 模块管理 => src/models

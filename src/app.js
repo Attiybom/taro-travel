@@ -1,15 +1,30 @@
+import { Component } from "react";
+import "./app.scss";
 
-import { useLaunch } from '@tarojs/taro'
-import './app.scss'
+// 引入dva全局状态管理
+import createApp from "./dva";
+import models from "./models";
 
-function App({ children }) {
+import { Provider } from "react-redux";
 
-  useLaunch(() => {
-    console.log('App launched.')
-  })
+const dvaApp = createApp({
+  initState: {}, //初始值
+  models, //模块
+});
+const store = dvaApp.getStore();
+class App extends Component {
+  componentDidMount() {}
 
-  // children 是将要会渲染的页面
-  return children
+  componentDidShow() {}
+
+  componentDidHide() {}
+
+  componentDidCatchError() {}
+
+  // this.props.children 是将要会渲染的页面
+  render() {
+    return <Provider store={store}>{this.props.children}</Provider>;
+  }
 }
 
-export default App
+export default App;
