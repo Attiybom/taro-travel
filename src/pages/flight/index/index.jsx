@@ -1,3 +1,5 @@
+import Taro from "@tarojs/taro";
+import dayjs from "dayjs";
 import { View, SwiperItem, Swiper, Image, Button, Text } from "@tarojs/components";
 import "./index.scss";
 
@@ -14,7 +16,7 @@ import { useEffect, useState } from "react";
 
 // store
 import { connect } from 'react-redux'
-import Taro from "@tarojs/taro";
+
 
 // 默认值
 const INIT_TABS = [
@@ -36,7 +38,7 @@ const INIT_TABS = [
 
 
 function FlightContent(props) {
-  const { arrCityName, dptCityName, dispatch } = props
+  const { arrCityName, dptCityName, dispatch, dptDate } = props
   const [adList, setAdList] = useState([])
 
   function handleTabClick(id) {
@@ -68,6 +70,14 @@ function FlightContent(props) {
     })
   }
 
+  // 点击日期
+  function handleChooseFlightDate() {
+    Taro.navigateTo({
+      url: '/pages/calendar/calendar'
+    })
+  }
+
+
   useEffect(() => {
     getAds()
   }, [])
@@ -89,8 +99,8 @@ function FlightContent(props) {
               <Text className="iconfont icon-zhihuan"></Text>
               <View className="cell to" onClick={() => handleChooseCity('arrive')}>{arrCityName }</View>
             </View>
-            <View className="item date">
-
+            <View className="item date" onClick={() => handleChooseFlightDate()}>
+              { dayjs(dptDate).format('M月D日')}
             </View>
             <Button className="search-btn">搜索</Button>
           </SwiperItem>
