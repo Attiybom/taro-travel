@@ -1,5 +1,7 @@
 import Taro from "@tarojs/taro";
 
+import { objectToString } from "./utils";
+
 const tools = {
   /**
    * @description 请求方法
@@ -81,6 +83,19 @@ const tools = {
     }
 
     return Taro.showToast(dptOption);
+  },
+
+  /**
+   *
+   * @description 封装路由跳转
+   * @param url 页面路径
+   * @param data 页面参数
+   */
+  navigateTo: ({ url, data }) => {
+    const searchStr = objectToString(data);
+    return Taro.navigateTo({
+      url: `${url}?${searchStr}`,
+    });
   },
 };
 

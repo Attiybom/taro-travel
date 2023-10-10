@@ -8,7 +8,7 @@ import models from "./models";
 import { Provider } from "react-redux";
 
 const dvaApp = createApp({
-  initState: {}, //初始值
+  initialState: {}, //初始值
   models, //模块
 });
 const store = dvaApp.getStore();
