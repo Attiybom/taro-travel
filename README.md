@@ -90,3 +90,15 @@ export default connect(mapStoreToProps)(FlightContent)
 
 ## Taro 路由
 ### 封装路由跳转方法
+
+
+## taro-ui配置
+* 安装taro-ui
+* h5常见问题: You may need an appropriate loader to handle this file type
+需要在 config/index.js 文件中添加如下配置项：
+```js
+// config/index.js
+h5: {
+  esnextModules: ['taro-ui']
+}
+```
