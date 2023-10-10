@@ -54,6 +54,7 @@
     "@tarojs/runtime": "3.6.17",
     "@tarojs/shared": "3.6.17",
     "@tarojs/taro": "3.6.17",
+    "dayjs": "^1.11.10",
     "dva": "2.4.1",
     "dva-core": "2.0.4",
     "express": "^4.18.2",

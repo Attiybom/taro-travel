@@ -1,4 +1,4 @@
-import { View, SwiperItem, Swiper, Image } from "@tarojs/components";
+import { View, SwiperItem, Swiper, Image, Button, Text } from "@tarojs/components";
 import "./index.scss";
 
 // 第三方库
@@ -11,6 +11,10 @@ import NoExploit from "../../../components/NoExploit";
 // api
 import { adsReq } from "@/common/api";
 import { useEffect, useState } from "react";
+
+// store
+import { connect } from 'react-redux'
+import Taro from "@tarojs/taro";
 
 // 默认值
 const INIT_TABS = [
@@ -28,18 +32,39 @@ const INIT_TABS = [
   },
 ];
 
-export default function FlightContent() {
 
+
+
+function FlightContent(props) {
+  const { arrCityName, dptCityName, dispatch } = props
   const [adList, setAdList] = useState([])
 
   function handleTabClick(id) {
     console.log("id", id);
   }
 
+  // 获取轮播图
   function getAds() {
     adsReq().then((res) => {
-      console.log('getAds', res)
+      // console.log('getAds', res)
       setAdList(res.result)
+    })
+  }
+
+
+  // 点击城市
+  function handleChooseCity(type) {
+    // console.log('type',type)
+    dispatch({
+      type: 'flightIndex/updateState',
+      payload: {
+        cityType: type
+      }
+    })
+    // 跳转
+    // 使用app.config.js中注册的绝对路径，需要加/
+    Taro.navigateTo({
+      url: '/pages/airportList/airportList'
     })
   }
 
@@ -59,8 +84,15 @@ export default function FlightContent() {
           {/* 测试app.scss 全局样式*/
           /* <SwiperItem className="color-red">111</SwiperItem> */}
           <SwiperItem>
+            <View className="item station">
+              <View className="cell from" onClick={() => handleChooseCity('depart')}>{ dptCityName}</View>
+              <Text className="iconfont icon-zhihuan"></Text>
+              <View className="cell to" onClick={() => handleChooseCity('arrive')}>{arrCityName }</View>
+            </View>
+            <View className="item date">
 
-
+            </View>
+            <Button className="search-btn">搜索</Button>
           </SwiperItem>
           <SwiperItem>
             <NoExploit className="no-data"></NoExploit>
@@ -81,3 +113,8 @@ export default function FlightContent() {
     </View>
   );
 }
+
+
+const mapStoreToProps = store => store.flightIndex
+
+export default connect(mapStoreToProps)(FlightContent)
