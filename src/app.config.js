@@ -9,6 +9,12 @@ export default defineAppConfig({
     "pages/airportList/airportList",
     "pages/calendar/calendar",
   ],
+  subPackages: [
+    {
+      root: "pages/flight",
+      pages: ["list/list"],
+    },
+  ],
   window: {
     backgroundTextStyle: "light",
     navigationBarBackgroundColor: "#fff",

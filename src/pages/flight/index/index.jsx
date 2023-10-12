@@ -16,6 +16,7 @@ import { useEffect, useState } from "react";
 
 // store
 import { connect } from 'react-redux'
+import tools from "@/common/tools";
 
 
 // 默认值
@@ -77,6 +78,28 @@ function FlightContent(props) {
     })
   }
 
+  //
+  function toFlightList() {
+    console.log('toFlightList', props)
+    const { arrAirportName = '',
+      arrCityId,
+      cityType, dptAirportName, dptCityId } = props
+
+    tools.navigateTo({
+      url: '/pages/flight/list/list',
+      data: {
+        arrAirportName,
+        arrCityId,
+        arrCityName,
+        cityType,
+        dptAirportName,
+        dptCityId,
+        dptCityName,
+        dptDate
+      }
+    })
+  }
+
 
   useEffect(() => {
     getAds()
@@ -102,7 +125,7 @@ function FlightContent(props) {
             <View className="item date" onClick={() => handleChooseFlightDate()}>
               { dayjs(dptDate).format('M月D日')}
             </View>
-            <Button className="search-btn">搜索</Button>
+            <Button className="search-btn" onClick={toFlightList}>机票查询</Button>
           </SwiperItem>
           <SwiperItem>
             <NoExploit className="no-data"></NoExploit>
