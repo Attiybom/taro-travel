@@ -19,3 +19,12 @@ export const airportListReq = (data) =>
     url: `${API_PRE}/city/airportList`,
     params: data,
   });
+
+/**
+ * @description 获取机票列表
+ */
+export const airTicketListReq = (data) =>
+  tools.request({
+    url: `${API_PRE}/airTicket/singleList`,
+    params: data,
+  });
