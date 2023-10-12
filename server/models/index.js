@@ -3,4 +3,5 @@ module.exports = (app) => {
   // callback 回调
   app.use("/ads", require("./ads"));
   app.use("/city", require("./airportList"));
+  app.use("/airTicket", require("./list"));
 };
