@@ -1,5 +1,7 @@
 import { View, ScrollView } from "@tarojs/components";
 import Taro, { getCurrentInstance } from "@tarojs/taro";
+import Skeleton from 'taro-skeleton'
+import 'taro-skeleton/dist/index.css'
 
 import './list.scss'
 
@@ -81,5 +83,12 @@ export default function FLightList() {
         }
       </ScrollView>
     </View>
+    {/* 骨架屏 */}
+    {
+      Array(7).fill(0).map((item, index) => (
+        <Skeleton key={index} row={3} action rowHeight={34}>
+        </Skeleton>
+      ))
+    }
   </View>
 }
