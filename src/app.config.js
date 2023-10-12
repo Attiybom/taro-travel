@@ -3,7 +3,18 @@ export default defineAppConfig({
   /**
    * @description pages 添加页面路由
    */
-  pages: ["pages/index/index", "pages/order/order"],
+  pages: [
+    "pages/index/index",
+    "pages/order/order",
+    "pages/airportList/airportList",
+    "pages/calendar/calendar",
+  ],
+  subPackages: [
+    {
+      root: "pages/flight",
+      pages: ["list/list"],
+    },
+  ],
   window: {
     backgroundTextStyle: "light",
     navigationBarBackgroundColor: "#fff",

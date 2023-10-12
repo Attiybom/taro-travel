@@ -23,7 +23,6 @@ export default function Index() {
   const [tabIndex, setTabIndex] = useState(0);
   function handleSwitchTabIndex(index) {
     setTabIndex(index);
-    console.log("index", tabIndex);
   }
   // 滑块样式
   const innerStyle = {
@@ -54,7 +53,7 @@ export default function Index() {
       {DEFAULT_TAB_LIST[tabIndex]["tab"] === "flight" ? (
         <FlightContent></FlightContent>
       ) : (
-        <NoExploit></NoExploit>
+        <NoExploit content={tabIndex}></NoExploit>
       )}
     </View>
   );

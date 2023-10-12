@@ -14,3 +14,94 @@ Error: module 'vendors-node_modules_taro_weapp_prebundle_react-dom_js.js' is not
     // 改后
     compiler: { type: "webpack5", prebundle: { enable: false } },
 ```
+
+# 全局设置
+## 全局样式设置
+### 方式一: webpack（config文件夹）中设置
+1. config 文件夹下的index文件
+2. baseConfig 对象中 添加sass 对象设置
+```js
+    sass: {
+      // 设置全局样式变量
+      data: `$primaryColor: '#0080ff';`,
+    },
+```
+3. 重新配置
+
+### 方式二: app.scss 文件中设置
+```js
+// 配置
+// app.scss
+.color-red {
+  color: red;
+}
+// 使用
+// flight => tab => index
+<SwiperItem className="color-red">111</SwiperItem>
+```
+
+## 全局路径配置
+```js
+// vscode 配置 - jsconfig.js
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["./src/components/*"],
+      "@/common/*": ["./src/common/*"]
+    }
+```
+
+## 装饰器配置
+```js
+// vscode 配置 jsconfig.json
+    "experimentalDecorators": true, //加上
+// eslint 配置
+
+"parserOptions": {
+  "ecmaFeatures" : {
+    "legacyDecorators": true, // 允许使用修饰符
+  }
+}
+
+```
+
+# 全局状态管理
+* 库：dva.js
+* dva实例注册 => src/dva.js => export default createApp
+* 模块管理 => src/models => index 统一导出models数组
+* app引入
+```js
+import { Provide } from 'react-redux'
+import createApp from './src/dva.js'
+import models from './src/models'
+
+const store = createApp({
+  initialState: {},
+  models
+})
+```
+* store属性提供 配置
+```js
+import {connect} from 'react-redux'
+
+const mapStoreToProps = store => store.flightIndex
+export default connect(mapStoreToProps)(FlightContent)
+```
+
+
+## Taro 路由
+### 封装路由跳转方法
+
+
+## taro-ui配置
+* 安装taro-ui
+* h5常见问题: You may need an appropriate loader to handle this file type
+需要在 config/index.js 文件中添加如下配置项：
+```js
+// config/index.js
+h5: {
+  esnextModules: ['taro-ui']
+}
+```
+
+## 微信地址获取
+### 微信逆地址解析
