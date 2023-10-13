@@ -12,7 +12,7 @@ export default defineAppConfig({
   subPackages: [
     {
       root: "pages/flight",
-      pages: ["list/list"],
+      pages: ["list/list", "detail/detail"],
     },
   ],
   window: {

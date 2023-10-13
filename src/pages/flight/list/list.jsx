@@ -94,6 +94,10 @@ export default function FLightList() {
   // 跳转详情
   function onFlightClick(flight) {
     console.log('onFlightClick', flight)
+    tools.navigateTo({
+      url: '/pages/flight/detail/detail',
+      data: {...flight}
+    })
   }
 
   // 航司列表
