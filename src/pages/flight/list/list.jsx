@@ -1,4 +1,4 @@
-import { View, ScrollView, Block, Text, Image } from "@tarojs/components";
+import { View, ScrollView, Block, Text, Image, Picker } from "@tarojs/components";
 import Taro, { getCurrentInstance } from "@tarojs/taro";
 import Skeleton from 'taro-skeleton'
 import 'taro-skeleton/dist/index.css'
@@ -12,12 +12,17 @@ import { useEffect, useState } from "react";
 import { airTicketListReq } from "@/common/api";
 import tools from "@/common/tools";
 
+
+
+let oriFlightData;
+
 export default function FLightList() {
   // 航班信息
   const [flightData, setFlightData] = useState({})
+
   // 日期信息
   const [dateList, setDateList] = useState([])
-  //
+  // 机票信息
   const [flightList, setFlightList] = useState([])
 
   useEffect(() => {
@@ -62,9 +67,13 @@ export default function FLightList() {
   function getTicketList() {
     // console.log('flightData', flightData)
     tools.showLoading()
+    setScrollTop('')
     airTicketListReq(flightData).then(res => {
-      // console.log('airTicketListReq', res)
       setFlightList(res.result)
+      oriFlightData = res.result
+      const companyList = Array.from(new Set(res.result.map(item => item.airCompanyName)))
+      setFlightCompanyList(companyList)
+      setScrollTop(0)
     }).catch(err => {
       console.log('airTicketListReq_err', err)
     }).finally(() => {
@@ -74,16 +83,37 @@ export default function FLightList() {
 
   // 用户点击选择日期
   function chooseDate(date) {
-    console.log('chooseDate', date)
     setFlightData({
       ...flightData,
       dptDate: date
     })
+    // 重新请求数据
+    getTicketList()
   }
 
   // 跳转详情
   function onFlightClick(flight) {
     console.log('onFlightClick', flight)
+  }
+
+  // 航司列表
+  const [flightCompanyList, setFlightCompanyList] = useState([])
+  // 当前选中的航班公司
+  const [currentAirCompony, setCurrentAirCompany] = useState('')
+  // 置顶
+  const [scrollTop, setScrollTop] = useState('')
+
+  function handleChooseCompany(e) {
+    const index = e.detail.value
+    setCurrentAirCompany(index)
+    const targetCompany = flightCompanyList[index]
+    const newFlightList = oriFlightData.filter(item => item.airCompanyName === targetCompany)
+    setFlightList(newFlightList)
+    // 列表重新置顶
+    setScrollTop('')
+    setTimeout(() => {
+      setScrollTop(0)
+    })
   }
 
   return <View className="list-container">
@@ -112,7 +142,7 @@ export default function FLightList() {
     </View>
     {
       flightList.length ? (<View id="flight-list">
-        <ScrollView className="flight-scroll-list" scrollY>
+        <ScrollView className="flight-scroll-list" scrollY scrollTop={scrollTop}>
           {flightList?.map((flight, index) => {
             const {                   dptAirportName,
               dptTimeStr,
@@ -179,6 +209,9 @@ export default function FLightList() {
         </View>
       )
     }
-
+    {/* 筛选器 */}
+    <Picker className="filter-btn" range={flightCompanyList} value={currentAirCompony} onChange={(e) => handleChooseCompany(e)}>
+    筛选
+    </Picker>
   </View>
 }
