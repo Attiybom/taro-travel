@@ -28,3 +28,16 @@ export const airTicketListReq = (data) =>
     url: `${API_PRE}/airTicket/singleList`,
     params: data,
   });
+
+
+/**
+ * @description 登录注册接口
+ */
+
+export const loginReq = (data) => {
+  return tools.request({
+    url: `${API_PRE}/login`,
+    params: data,
+    method: 'POST'
+  })
+}
