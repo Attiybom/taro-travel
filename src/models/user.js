@@ -1,9 +1,9 @@
-import { getStorageSync } from "@tarojs/taro";
+import tools from "@/common/tools";
 
 const INIT_STATE = () => {
-  const userInfo = getStorageSync("userInfo");
+  const userInfo = tools.getStorageSyncWithTime("userInfo");
   return {
-    isLogin: !userInfo?.userPhone,
+    isLogin: !!userInfo?.userPhone,
     userPhone: userInfo?.userPhone,
     nickName: userInfo?.nickName,
   };
