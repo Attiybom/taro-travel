@@ -61,7 +61,8 @@ export default function FLightList() {
   // 获取机票数据
   useEffect(() => {
     getTicketList()
-  }, [flightData])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   // 请求机票数据
   function getTicketList() {
@@ -93,7 +94,6 @@ export default function FLightList() {
 
   // 跳转详情
   function onFlightClick(flight) {
-    console.log('onFlightClick', flight)
     tools.navigateTo({
       url: '/pages/flight/detail/detail',
       data: {...flight}
@@ -122,7 +122,8 @@ export default function FLightList() {
 
   return <View className="list-container">
     <View  className="calendar-list">
-      <ScrollView             className="calendar-scroll-list"
+      <ScrollView
+        className="calendar-scroll-list"
         scrollX
         scrollWithAnimation
         scrollIntoView={`date-${flightData.dptDate}`}

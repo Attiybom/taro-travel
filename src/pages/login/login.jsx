@@ -11,7 +11,7 @@ import { debounce } from "@/common/utils"
 import { loginReq } from "@/common/api"
 import tools from "@/common/tools"
 import { ERR_MSG } from "@/common/constant"
-import Taro, { setStorageSync } from "@tarojs/taro"
+import Taro from "@tarojs/taro"
 
 // store
 import { connect } from 'react-redux'
@@ -29,6 +29,10 @@ class Login extends React.PureComponent {
       password: ''
     }
   }
+
+  // componentDidMount() {
+  //   console.log('----login-----', tools.getStorageSyncWithTime('userInfo'))
+  // }
 
   handleInput = debounce((e, type) => {
     this.setState({
@@ -64,20 +68,25 @@ class Login extends React.PureComponent {
       nickName,
       password
     }).then(res => {
-      console.log('loginRes', res)
-      const { nickName: nickNameRes, userPhone: userPhoneRes } = res.result
-      setStorageSync('userInfo', {
-        nickNameRes,
-        userPhoneRes
-      })
+      // console.log('loginRes', res)
+      // const { nickName: nickNameRes, userPhone: userPhoneRes } = res.result
+      // 存储数据到storage中，10为10秒后过期移除数据, 60 * 60 * 24 * 7 代表7天后登录失效
+      tools.setStorageSyncWithTime('userInfo', {
+        nickName: res.result.nickName,
+        userPhone: res.result.userPhone
+      }, 60 * 60 * 24 * 7)
+      // setStorageSync('userInfo', {
+      //   nickName: res.result.nickName,
+      //   userPhone: res.result.userPhone
+      // })
 
       // 更新store
       this.props.dispatch({
         type: 'user/updateUserInfo',
         payload: {
-          nickNameRes,
-          userPhoneRes,
-          isLogin: !!userPhoneRes
+          nickName: res.result.nickName,
+          userPhone: res.result.userPhone,
+          isLogin: !!(res.result.userPhone)
         }
       })
 
