@@ -97,6 +97,54 @@ const tools = {
       url: `${url}?${searchStr}`,
     });
   },
+
+  /**
+   * @description 缓存
+   * @param time 缓存有效时间, 单位有效时间
+   */
+
+  setStorageSyncWithTime: (key, value, time) => {
+    try {
+      const curTime = Date.now();
+      const expireTime = curTime + time * 1000; // time单位为秒，因此要*1000转换为毫秒
+
+      Taro.setStorageSync(key, {
+        [key]: value,
+        expireTime,
+      });
+    } catch (err) {
+      console.log("setStorageSyncWithTime", err);
+    }
+  },
+  getStorageSyncWithTime: (key) => {
+    try {
+      const result = Taro.getStorageSync(key);
+      const { expireTime } = result;
+      if (Date.now() > expireTime) {
+        // 已过期
+        Taro.removeStorageSync(key);
+      } else {
+        return result[key];
+      }
+    } catch (error) {
+      console.log("getStorageSyncWithTime", error);
+    }
+  },
+
+  /**
+   * @description 执行方法前，先判断是否需要重定向登录
+   */
+
+  doLogin: (fn) => {
+    const user = tools.getStorageSyncWithTime("userInfo");
+    if (!user?.userPhone) {
+      tools.navigateTo({
+        url: "/pages/login/login",
+      });
+    } else {
+      fn?.();
+    }
+  },
 };
 
 export default tools;

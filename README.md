@@ -142,3 +142,40 @@ export default withShare;
 
 ## 微信小程序登录
 参考 小程序登录文档： https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html
+### 登录接口 - 参数解析
+```js
+// express 新增两个中间件
+
+// 当请求体content-type 时application/json时,并映射到req.body上
+
+app.use(express.json());
+// 当请求体content-type 时application/x-www-form-urlencoded时
+app.use(express.urlencoded({ extended: false }));
+
+
+```
+### 登录接口逻辑
+1. 创建user表&store中的user模块
+2. 用户输入相关信息，接受并对比数据库中是否存在
+  *  如果存在，则说明登录操作 => 登录成功/失败
+  *  如果不村子，则说明注册操作 => 提示
+3. 登录成功后，将用户信息存到storage以及store中 => setStorageSync
+4. 后续操作需要从storage中获取信息并携带过去 => getStorageSync
+5. 最后removeStorageSync
+#### 有时效性的缓存方法
+1. 设置缓存时，传入一个缓存的有效时间， 缓存一个过期时间的值 => 设置缓存时 + 缓存有效时间
+2. 获取缓存时，用当前获取缓存的时间与过期时间进行比较，大于则已过期，此时会移除数据，如果小于就返回数据
+
+
+### 验证登录态
+1. 服务端验证 => 需要后端接口返回登录态
+2. 客户端验证 => 前端验证
+* 通过封装高阶组件，在生命周期中判断storage中是否存有用户信息进而判断是否需要重定向到登录页
+
+### connect => bug
+* 两种connect方式不同，props获取不到
+
+
+
+### 封装函数重定向到登录页
+* 类似于防抖节流的原理，将函数传进入，先走一段判断是否需要重定向登录页的逻辑

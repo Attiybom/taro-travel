@@ -5,6 +5,9 @@ const app = express();
 
 const models = require("./models");
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 // app.get("/", (req, res) => {
 //   res.send("hello world");
 // });
