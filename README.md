@@ -105,3 +105,36 @@ h5: {
 
 ## 微信地址获取
 ### 微信逆地址解析
+
+## 页面分享功能
+1. 右上角菜单“转发”
+2. Button组件openType='share'
+3. 在当前页面设置onShareAppMessage
+* onShareAppMessage只有在页面才能触发，组件无法触发
+```js
+// 封装装饰器实现页面分享功能
+
+const withShare = (opts) => {
+  // 返回react高阶组件
+  /**
+   * WrapperComponent withShare包裹的组件
+   * @{param}
+   */
+  return (WrapperComponent) => {
+    class MyComponent extends WrapperComponent {
+      onShareAppMessage() {
+        console.log(this.props);
+        return {
+          ...opts,
+          path: `/${this.props.tid}`,
+        };
+      }
+    }
+
+    return MyComponent;
+  };
+};
+
+export default withShare;
+
+```
