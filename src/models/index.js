@@ -1,3 +1,4 @@
 import flightIndex from "./flightIndex";
+import userIndex from "./user";
 
-export default [flightIndex];
+export default [flightIndex, userIndex];

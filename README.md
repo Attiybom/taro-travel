@@ -142,3 +142,23 @@ export default withShare;
 
 ## 微信小程序登录
 参考 小程序登录文档： https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html
+### 登录接口 - 参数解析
+```js
+// express 新增两个中间件
+
+// 当请求体content-type 时application/json时,并映射到req.body上
+
+app.use(express.json());
+// 当请求体content-type 时application/x-www-form-urlencoded时
+app.use(express.urlencoded({ extended: false }));
+
+
+```
+### 登录接口设计
+1. 创建mysql表
+2. 用户输入相关信息，接受并对比数据库中是否存在
+  *  如果存在，则说明登录操作 => 登录成功/失败
+  *  如果不村子，则说明注册操作 => 提示
+3. 登录成功后，将用户信息存到storage中 => setStorageSync
+4. 后续操作需要从storage中获取信息并携带过去 => getStorageSync
+5. 最后removeStorageSync
