@@ -103,7 +103,7 @@ h5: {
 }
 ```
 
-## 微信地址获取
+## 微信地址获取（todo）
 ### 微信逆地址解析
 
 ## 页面分享功能
@@ -138,3 +138,7 @@ const withShare = (opts) => {
 export default withShare;
 
 ```
+
+
+## 微信小程序登录
+参考 小程序登录文档： https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/login.html

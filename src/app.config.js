@@ -8,6 +8,7 @@ export default defineAppConfig({
     "pages/order/order",
     "pages/airportList/airportList",
     "pages/calendar/calendar",
+    "pages/login/login",
   ],
   subPackages: [
     {
