@@ -12,6 +12,9 @@ import LoginDecorator from "@/components/LoginDecorator/LoginDecorator";
 import { connect } from 'react-redux'
 import './detail.scss'
 import tools from "@/common/tools";
+import { orderReq } from "@/common/api";
+import { ERR_MSG } from "@/common/constant";
+import Taro from "@tarojs/taro";
 
 @withShare({
   title: '我的行程分你一半，快乐同样分你一半～',
@@ -43,8 +46,35 @@ class FlightDetail extends React.PureComponent {
 
   // 订票
   onOrder() {
+    // 用户信息
+    const { userPhone } = this.props.user
+    // 当前机票信息
+    const { selectedFlightData } = this.state
+
     tools.doLogin(() => {
-      console.log('已登录')
+      tools.showLoading()
+      orderReq({
+        userPhone,
+        orderInfo: {
+          ...selectedFlightData
+        }
+      }).then(() => {
+        tools.showToast({
+          title: '预定成功！',
+          icon: 'loading',
+          duration: 2000
+        }).then(() => {
+          Taro.switchTab({
+            url: '/pages/order/order'
+          })
+        })
+
+      }).catch(err => {
+        console.log('orderError', err)
+        tools.showToast(err?.data.mes || ERR_MSG)
+      }).finally(() => {
+        tools.hideLoading()
+      })
     })
   }
 
@@ -60,7 +90,6 @@ class FlightDetail extends React.PureComponent {
       dptTime,
       dptTimeStr,
       price, } = selectedFlightData
-    console.log('this.props', this.props)
     const { nickName, userPhone, isLogin } = this.props.user
     return (
       <View className="detail-container">

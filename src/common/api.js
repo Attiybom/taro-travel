@@ -41,3 +41,14 @@ export const loginReq = (data) => {
     method: 'POST'
   })
 }
+
+
+/**
+ * @description 订单预定接口
+ */
+
+export const orderReq = (data) => tools.request({
+  url: `${API_PRE}/order/order`,
+  params: data,
+  method: 'POST'
+})
