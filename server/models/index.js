@@ -5,4 +5,5 @@ module.exports = (app) => {
   app.use("/city", require("./airportList"));
   app.use("/airTicket", require("./list"));
   app.use(require("./login"));
+  app.use("/order", require("./orderList"));
 };

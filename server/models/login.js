@@ -25,7 +25,6 @@ router.post("/login", async (req, res) => {
       // 有对应的用户数据 => 登录操作
       const getUserInfoSql = `select nickName, password from user_table where userPhone=${userPhone}`;
       const userInfoRes = await sqlQuery(getUserInfoSql);
-      console.log("userInfoRes", userInfoRes);
       if (userInfoRes.length && userInfoRes[0].password === password) {
         // 信息对的上
         // 登录成功

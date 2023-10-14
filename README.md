@@ -172,10 +172,15 @@ app.use(express.urlencoded({ extended: false }));
 2. 客户端验证 => 前端验证
 * 通过封装高阶组件，在生命周期中判断storage中是否存有用户信息进而判断是否需要重定向到登录页
 
-### connect => bug
+### connect => bug(todo)
 * 两种connect方式不同，props获取不到
 
 
 
 ### 封装函数重定向到登录页
 * 类似于防抖节流的原理，将函数传进入，先走一段判断是否需要重定向登录页的逻辑
+### flightDate => bug(todo)
+
+## 订单接口
+1. 用户信息与订单信息进行强绑定
+2.

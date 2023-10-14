@@ -15,7 +15,7 @@ import tools from "@/common/tools";
 
 
 let oriFlightData;
-
+let testFlightData;
 export default function FLightList() {
   // 航班信息
   const [flightData, setFlightData] = useState({})
@@ -28,34 +28,45 @@ export default function FLightList() {
   useEffect(() => {
     // 获取路由参数并存储
     const { params } = getCurrentInstance().router
+    // console.log('list-router', getCurrentInstance().router)
     const {
       arrAirportName,
       arrCityId,
       arrCityName,
-      cityType,
       dptAirportName,
       dptCityId,
       dptCityName,
       dptDate } = params
-    setFlightData({
-      arrAirportName,
-      arrCityId,
-      arrCityName,
-      cityType,
-      dptAirportName,
+    testFlightData = {...params}
+    console.log({
       dptCityId,
       dptCityName,
-      dptDate
+      arrCityId,
+      arrCityName,
+      dptDate,
+      arrAirportName,
+      dptAirportName,
+    })
+    setFlightData({
+      dptCityId,
+      dptCityName,
+      arrCityId,
+      arrCityName,
+      dptDate,
+      arrAirportName,
+      dptAirportName,
     })
 
     // 修改页面标题
     Taro.setNavigationBarTitle({
       title: `${dptCityName} - ${arrCityName}`
     })
+    console.log('testFlightData', testFlightData)
+  }, [])
 
+  useEffect(() => {
     // 设置顶部日历信息
     setDateList(formatDateList())
-
   }, [])
 
   // 获取机票数据
@@ -66,10 +77,9 @@ export default function FLightList() {
 
   // 请求机票数据
   function getTicketList() {
-    // console.log('flightData', flightData)
     tools.showLoading()
     setScrollTop('')
-    airTicketListReq(flightData).then(res => {
+    airTicketListReq(testFlightData).then(res => {
       setFlightList(res.result)
       oriFlightData = res.result
       const companyList = Array.from(new Set(res.result.map(item => item.airCompanyName)))
@@ -85,7 +95,7 @@ export default function FLightList() {
   // 用户点击选择日期
   function chooseDate(date) {
     setFlightData({
-      ...flightData,
+      ...testFlightData,
       dptDate: date
     })
     // 重新请求数据
@@ -94,6 +104,7 @@ export default function FLightList() {
 
   // 跳转详情
   function onFlightClick(flight) {
+    // console.log('flight', flight)
     tools.navigateTo({
       url: '/pages/flight/detail/detail',
       data: {...flight}
@@ -149,13 +160,15 @@ export default function FLightList() {
       flightList.length ? (<View id="flight-list">
         <ScrollView className="flight-scroll-list" scrollY scrollTop={scrollTop}>
           {flightList?.map((flight, index) => {
-            const {                   dptAirportName,
+            const {
+              dptAirportName,
               dptTimeStr,
               arrTimeStr,
               arrAirportName,
               airIcon,
               airCompanyName,
-              price, } = flight
+              price,
+            } = flight
 
 
             return (
