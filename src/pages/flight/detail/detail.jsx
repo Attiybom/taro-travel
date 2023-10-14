@@ -164,9 +164,10 @@ class Detail extends React.PureComponent {
   }
 }
 
-// const mapStateToProps = (store) => {
+// const mapStateToProps = (state) => {
+//   console.log('state', state)
 //   return ({
-//     ...store
+//     user: state.user
 //   })
 // }
 
