@@ -15,11 +15,7 @@ export default function TabContent({
 
   useEffect(() => {
     if (initTab == null) {
-      console.log('initTab')
       setCurrentId(tabList[0]["id"]);
-      setTimeout(() => {
-        console.log('currentId', currentId)
-      })
     } else {
       setCurrentId(initTab);
     }

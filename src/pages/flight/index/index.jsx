@@ -80,7 +80,6 @@ function FlightContent(props) {
 
   //
   function toFlightList() {
-    console.log('toFlightList', props)
     const { arrAirportName = '',
       arrCityId,
       cityType, dptAirportName, dptCityId } = props

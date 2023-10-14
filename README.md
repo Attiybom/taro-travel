@@ -200,7 +200,6 @@ class Detail extends React.PureComponent {...
   }
 }
 const mapStateToProps = (store) => {
-  console.log('store', store)
   return ({
     ...store
   })
@@ -213,8 +212,15 @@ export default connect(mapStateToProps)(Detail)
 
 ### 封装函数重定向到登录页
 * 类似于防抖节流的原理，将函数传进入，先走一段判断是否需要重定向登录页的逻辑
-### flightDate => bug(todo)
+### flightData => bug(todo)
 
 ## 订单接口
 1. 用户信息与订单信息进行强绑定
-2.
+
+
+
+
+## 性能优化
+### 虚拟列表渲染机票页和订单页(todo)
+### 优化楼层删除节点导致兄弟节点重新渲染(todo)
+### 数据缓存 => 适用场景: 数据量大 + 数据更新不频繁

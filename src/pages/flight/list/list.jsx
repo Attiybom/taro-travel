@@ -38,15 +38,7 @@ export default function FLightList() {
       dptCityName,
       dptDate } = params
     testFlightData = {...params}
-    console.log({
-      dptCityId,
-      dptCityName,
-      arrCityId,
-      arrCityName,
-      dptDate,
-      arrAirportName,
-      dptAirportName,
-    })
+
     setFlightData({
       dptCityId,
       dptCityName,
@@ -61,7 +53,6 @@ export default function FLightList() {
     Taro.setNavigationBarTitle({
       title: `${dptCityName} - ${arrCityName}`
     })
-    console.log('testFlightData', testFlightData)
   }, [])
 
   useEffect(() => {
@@ -104,7 +95,6 @@ export default function FLightList() {
 
   // 跳转详情
   function onFlightClick(flight) {
-    // console.log('flight', flight)
     tools.navigateTo({
       url: '/pages/flight/detail/detail',
       data: {...flight}
