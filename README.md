@@ -174,6 +174,40 @@ app.use(express.urlencoded({ extended: false }));
 
 ### connect => bug(todo)
 * 两种connect方式不同，props获取不到
+```js
+// 情况一：
+import { connect } from 'react-redux'
+@connect((store) => {
+  return ({
+    ...store
+  })
+})
+class Detail extends React.PureComponent {...
+  render() {
+    const { nickName,isLogin } = this.props.user // 能拿到
+
+    return (...)
+  }
+}
+
+// 情况二
+import { connect } from 'react-redux'
+class Detail extends React.PureComponent {...
+  render() {
+    const { nickName,isLogin } = this.props.user // 拿不到
+
+    return (...)
+  }
+}
+const mapStateToProps = (store) => {
+  console.log('store', store)
+  return ({
+    ...store
+  })
+}
+export default connect(mapStateToProps)(Detail)
+```
+
 
 
 
