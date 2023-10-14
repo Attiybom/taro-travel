@@ -5,15 +5,21 @@ import { View, Swiper } from "@tarojs/components";
 export default function TabContent({
   className = "",
   tabList = [],
-  initTab = "",
-  onTabClick = null,
+  initTab = null,
+  onTabClick = () => {
+    console.log('onTabClick is not exist')
+  },
   children = [],
 }) {
   const [currentId, setCurrentId] = useState(0);
 
   useEffect(() => {
     if (initTab == null) {
+      console.log('initTab')
       setCurrentId(tabList[0]["id"]);
+      setTimeout(() => {
+        console.log('currentId', currentId)
+      })
     } else {
       setCurrentId(initTab);
     }
@@ -41,15 +47,15 @@ export default function TabContent({
   return (
     <View className={`tab-container ${className}`}>
       <View className="tab-bar">
-        {tabList?.map((tab) => (
-          <View
+        {tabList?.map((tab) => {
+          return <View
             key={tab.id}
             className={`tab-item ${currentId === tab.id ? "active" : ""}`}
             onClick={() => handleClick(tab.id)}
           >
             {tab.label}
           </View>
-        ))}
+        })}
         {/* 下划线 */}
         <View className="scroll-bar" style={innerStyle}></View>
       </View>

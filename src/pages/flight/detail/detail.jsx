@@ -21,12 +21,13 @@ import Taro from "@tarojs/taro";
   imageUrl: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180914%2Ff4b0c16e207e4fd0b686bf378a62989c.jpg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1633356232&t=99c2f5e1ceb1b611976b1e28608aeee7'
 })
 @LoginDecorator
+
   @connect((store) => {
     return ({
       ...store
     })
   })
-class FlightDetail extends React.PureComponent {
+class Detail extends React.PureComponent {
 
   constructor(props) {
     super(props)
@@ -79,6 +80,8 @@ class FlightDetail extends React.PureComponent {
   }
 
   render() {
+    console.log('props', this.props)
+    const { nickName = '', isLogin = false, userPhone = 0 } = this.props.user || {}
 
     const { selectedFlightData } = this.state
     const {
@@ -90,7 +93,8 @@ class FlightDetail extends React.PureComponent {
       dptTime,
       dptTimeStr,
       price, } = selectedFlightData
-    const { nickName, userPhone, isLogin } = this.props.user
+
+
     return (
       <View className="detail-container">
         <View className="flight-segment">
@@ -160,12 +164,12 @@ class FlightDetail extends React.PureComponent {
   }
 }
 
-// const mapStoreToProps = (store) => {
-//   console.log('store', store)
+// const mapStateToProps = (state) => {
+//   console.log('state', state)
 //   return ({
-//     ...store
+//     user: state.user
 //   })
 // }
 
-// export default connect(mapStoreToProps)(FlightDetail)
-export default FlightDetail
+// export default connect(mapStateToProps)(Detail)
+export default Detail

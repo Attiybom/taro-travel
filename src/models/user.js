@@ -21,5 +21,10 @@ export default {
         ...action.payload,
       };
     },
+    logout() {
+      return {
+        ...INIT_STATE(),
+      };
+    },
   },
 };

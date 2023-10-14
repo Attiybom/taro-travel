@@ -40,4 +40,26 @@ router.post("/order", async (req, res) => {
   }
 });
 
+
+router.post("/getOrderList", async (req, res) => {
+  try {
+    const { userPhone } = req.body;
+    console.log("req.body", req.body);
+    // desc：降序查询 asc：升序查询
+    const sqlStr = `select * from order_list where userPhone=${userPhone} order by id desc`;
+    const orderList = await sqlQuery(sqlStr);
+    res.send({
+      code: 1,
+      msg: "请求成功",
+      result: orderList,
+    });
+  } catch (error) {
+    res.send({
+      code: -1,
+      msg: "请求失败",
+      result: error,
+    });
+  }
+});
+
 module.exports = router;
