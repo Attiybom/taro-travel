@@ -52,3 +52,12 @@ export const orderReq = (data) => tools.request({
   params: data,
   method: 'POST'
 })
+/**
+ * @description 查询订单接口
+ */
+
+export const getOrderListReq = (data) => tools.request({
+  url: `${API_PRE}/order/getOrderList`,
+  params: data,
+  method: 'POST'
+})
