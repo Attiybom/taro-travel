@@ -145,6 +145,9 @@ const tools = {
       fn?.();
     }
   },
+
+  isAlipay: Taro.ENV_TYPE.ALIPAY === Taro.getEnv(),
+  isH5: Taro.ENV_TYPE.WEB === Taro.getEnv(),
 };
 
 export default tools;

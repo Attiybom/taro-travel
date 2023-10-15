@@ -81,7 +81,7 @@ export default function AirportList() {
     <View className="airport-list-container">
       <ScrollView
         scrollY
-        scrollAnimationDuration
+        scrollAnimationDuration={!tools.isAlipay}
         style={{ height: `100vh` }}
         scrollIntoView={currentLetter}
       >

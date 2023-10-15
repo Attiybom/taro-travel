@@ -135,13 +135,15 @@ function FlightContent(props) {
         </TabContent>
       </View>
       {/* 图片轮播 */}
-      <Swiper className="advs-banner-bd" autoplay>
-        {adList.map((img) => (
-          <SwiperItem key={img.id} className="item">
-            <Image className="img" src={img.imgUrl}></Image>
-          </SwiperItem>
-        ))}
-      </Swiper>
+      <View className="alipay-swiper">
+        <Swiper className="advs-banner-bd" autoplay>
+          {adList.map((img) => (
+            <SwiperItem key={img.id} className="item">
+              <Image className="img" src={img.imgUrl}></Image>
+            </SwiperItem>
+          ))}
+        </Swiper>
+      </View>
     </View>
   );
 }

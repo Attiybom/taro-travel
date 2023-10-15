@@ -61,6 +61,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "mysql2": "^3.6.1",
+    "promise-prototype-finally": "^1.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-redux": "7.2.0",
@@ -70,7 +71,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
     "@tarojs/cli": "3.6.17",
     "@tarojs/taro-loader": "3.6.17",
     "@tarojs/test-utils-react": "^0.1.1",

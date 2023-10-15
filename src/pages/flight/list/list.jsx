@@ -218,8 +218,10 @@ export default function FLightList() {
       )
     }
     {/* 筛选器 */}
-    <Picker className="filter-btn" range={flightCompanyList} value={currentAirCompony} onChange={(e) => handleChooseCompany(e)}>
-    筛选
-    </Picker>
+    <View className={`filter-btn ${flightList?.length ? '' : 'hidden'}`}>
+      <Picker  range={flightCompanyList} value={currentAirCompony} onChange={(e) => handleChooseCompany(e)}>
+        筛选
+      </Picker>
+    </View>
   </View>
 }
