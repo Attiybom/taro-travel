@@ -37,22 +37,33 @@ export default function AirportList() {
 
   // 获取城市列表数据
   function getAirportList() {
-    airportListReq()
-      .then((res) => {
-        tools.showLoading();
-        const { result } = res;
-        const listObj = formatList(result);
-        setCityListObj(listObj);
-        setLetterList(Object.keys(listObj));
+    tools.showLoading()
+    const flightCityListFromStorage = tools.getStorageSyncWithTime('flightCityList') || []
+    if (!flightCityListFromStorage.length) {
+      airportListReq()
+        .then((res) => {
+          const { result } = res;
+          tools.setStorageSyncWithTime('flightCityList', result, 60 * 60 * 24 * 7)
+          // tools.setStorageSyncWithTime('flightCityList', result, 20)
+          const listObj = formatList(result);
+          setCityListObj(listObj);
+          setLetterList(Object.keys(listObj));
         // console.log("airportListReq_res", res);
-      })
-      .catch((err) => {
-        tools.showToast(ERR_MSG);
-        console.log("err", err);
-      })
-      .finally(() => {
-        tools.hideLoading();
-      });
+        })
+        .catch((err) => {
+          tools.showToast(ERR_MSG);
+          console.log("err", err);
+        })
+        .finally(() => {
+          tools.hideLoading();
+        });
+    } else {
+      const listObj = formatList(flightCityListFromStorage);
+      setCityListObj(listObj);
+      setLetterList(Object.keys(listObj));
+      tools.hideLoading()
+    }
+
   }
 
   // 点击右侧字母表
@@ -63,13 +74,14 @@ export default function AirportList() {
 
   useEffect(() => {
     getAirportList();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <View className="airport-list-container">
       <ScrollView
         scrollY
-        scrollAnimationDuration
+        scrollAnimationDuration={!tools.isAlipay}
         style={{ height: `100vh` }}
         scrollIntoView={currentLetter}
       >

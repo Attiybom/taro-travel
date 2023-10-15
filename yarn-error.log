@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js remove require
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js install
 
 PATH: 
   C:\Users\a9106\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\a9106\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Ruby32-x64\bin;C:\Python310\Scripts;C:\Python310;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Tencent\微信web开发者工具\dll;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;%NVM_HOME%;%NVM_SYMLINK%;C:\Users\a9106\AppData\Local\Microsoft\WindowsApps;C:\Users\a9106\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\a9106\AppData\Local\Programs\Fiddler;C:\Users\a9106\AppData\Local\Microsoft\WindowsApps;C:\Users\a9106\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: ENOENT: no such file or directory, copyfile 'C:\Users\a9106\AppData\Local\Yarn\Cache\v6\npm-color-convert-1.9.3-bb71850690e1f136567de629d2d5471deda4c1e8-integrity\node_modules\color-convert\conversions.js' -> 'D:\前端\taro\taro_demo\node_modules\@babel\code-frame\node_modules\color-convert\conversions.js'
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\a9106\AppData\Local\Yarn\Cache\v6\npm-@ampproject-remapping-2.2.1-99e8e11851128b8702cd57c33684f1d0f260b630-integrity\node_modules\@ampproject\remapping\package.json' -> 'D:\前端\taro\taro_demo\node_modules\@ampproject\remapping\package.json'
 
 npm manifest: 
   {
@@ -73,16 +73,24 @@ npm manifest:
       "@tarojs/runtime": "3.6.17",
       "@tarojs/shared": "3.6.17",
       "@tarojs/taro": "3.6.17",
+      "dayjs": "^1.11.10",
+      "dva": "2.4.1",
+      "dva-core": "2.0.4",
       "express": "^4.18.2",
       "husky": "^8.0.3",
       "lint-staged": "^14.0.1",
       "mysql2": "^3.6.1",
+      "promise-prototype-finally": "^1.0.0",
       "react": "^18.0.0",
-      "react-dom": "^18.0.0"
+      "react-dom": "^18.0.0",
+      "react-redux": "7.2.0",
+      "request": "^2.88.2",
+      "taro-skeleton": "2.0.4",
+      "taro-ui": "3.0.0-alpha.3"
     },
     "devDependencies": {
       "@babel/core": "^7.8.0",
-      "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
+      "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
       "@tarojs/cli": "3.6.17",
       "@tarojs/taro-loader": "3.6.17",
       "@tarojs/test-utils-react": "^0.1.1",
@@ -1276,7 +1284,15 @@ Lockfile:
       core-js-pure "^3.30.2"
       regenerator-runtime "^0.14.0"
   
-  "@babel/runtime@^7.14.5", "@babel/runtime@^7.21.5", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4":
+  "@babel/runtime@7.0.0-beta.46":
+    version "7.0.0-beta.46"
+    resolved "https://registry.npmmirror.com/@babel/runtime/-/runtime-7.0.0-beta.46.tgz#466a9c0498f6d12d054a185981eef742d59d4871"
+    integrity sha512-/3a3USMKk54BEHhDgY8rtxtaQOs4bp4aQwo6SDtdwmrXmgSgEusWuXNX5oIs/nwzmTD9o8wz2EyAjA+uHDMmJA==
+    dependencies:
+      core-js "^2.5.3"
+      regenerator-runtime "^0.11.1"
+  
+  "@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.14.5", "@babel/runtime@^7.21.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
     version "7.23.1"
     resolved "https://registry.npmmirror.com/@babel/runtime/-/runtime-7.23.1.tgz#72741dc4d413338a91dcb044a86f3c0bc402646d"
     integrity sha512-hC2v6p8ZSI/W0HUzh3V8C5g+NwSKzKPtJwSpTjwl0o297GP9+ZLQSkdvHz46CM3LqyoXxq+5G9komY+eSqSO0g==
@@ -1754,7 +1770,7 @@ Lockfile:
     resolved "https://registry.npmmirror.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
     integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
   
-  "@pmmmwh/react-refresh-webpack-plugin@^0.5.5":
+  "@pmmmwh/react-refresh-webpack-plugin@^0.5.11":
     version "0.5.11"
     resolved "https://registry.npmmirror.com/@pmmmwh/react-refresh-webpack-plugin/-/react-refresh-webpack-plugin-0.5.11.tgz#7c2268cedaa0644d677e8c4f377bc8fb304f714a"
     integrity sha512-7j/6vdTym0+qZ6u4XbSAxrWBGYSdCfTzySkj7WAFgDLmSyWlOrWvpyzxlFh5jtw9dn0oL/jtW+06XfFiisN3JQ==
@@ -1814,6 +1830,13 @@ Lockfile:
     integrity sha512-V4BG07kuYSUkTCSBHG8G8TNhM+F19jXFWnQtzj+we8DrkpSBCee9Z3Ms8yiGer/dlmhe35/Xdgyo3/0rQKg7YA==
     dependencies:
       "@sinonjs/commons" "^3.0.0"
+  
+  "@stencil/core@^1.8.1":
+    version "1.17.4"
+    resolved "https://registry.npmmirror.com/@stencil/core/-/core-1.17.4.tgz#f7beb16ecb3344c80e053fece013ae499adc7c54"
+    integrity sha512-dmuNYM6fnHPvE2ptHoUBQtjcpXqrHnkDtdyUD6/JrZWcJt6jBtrykewObOxzpDCMLs+NT7668ussRagdVL03gQ==
+    dependencies:
+      typescript "3.9.7"
   
   "@stencil/core@^2.22.2":
     version "2.22.3"
@@ -1902,7 +1925,7 @@ Lockfile:
     dependencies:
       defer-to-connect "^1.0.1"
   
-  "@tarojs/api@3.6.17":
+  "@tarojs/api@3.6.17", "@tarojs/api@^3.0.11":
     version "3.6.17"
     resolved "https://registry.npmmirror.com/@tarojs/api/-/api-3.6.17.tgz#4f0d738b2aa0a9a36d58fa7837e1b19af84a7a4f"
     integrity sha512-16IDRN0uoBuUhFt5LqrzNKc9ZrzxSplsMN0tuYiIenlqAxsNaPvAVz+93TIWDg14uabGN5JeWKMJs+Ng51rxQw==
@@ -1966,6 +1989,21 @@ Lockfile:
       intersection-observer "^0.7.0"
       resolve-pathname "^3.0.0"
       swiper "6.8.0"
+      weui "^1.1.2"
+  
+  "@tarojs/components@3.0.11":
+    version "3.0.11"
+    resolved "https://registry.npmmirror.com/@tarojs/components/-/components-3.0.11.tgz#6545ea1531f5470034e2cf7c77441207bb22d001"
+    integrity sha512-Bt8YxIvTf9gCivkzSvgpdzaxVViH9mRTIFGzjpHfWiJ2q4cR9z9I8Mh0EVP5uTk4fkSMag8xDUzVj2T0zP00bQ==
+    dependencies:
+      "@stencil/core" "^1.8.1"
+      "@tarojs/taro" "^3.0.11"
+      better-scroll "^1.14.1"
+      classnames "^2.2.5"
+      intersection-observer "^0.7.0"
+      omit.js "^1.0.0"
+      resolve-pathname "^3.0.0"
+      swiper "4.4.2"
       weui "^1.1.2"
   
   "@tarojs/components@3.6.17":
@@ -2183,7 +2221,17 @@ Lockfile:
       "@tarojs/shared" "3.6.17"
       react-reconciler "0.27.0"
   
-  "@tarojs/router@3.6.17":
+  "@tarojs/router@3.0.11":
+    version "3.0.11"
+    resolved "https://registry.npmmirror.com/@tarojs/router/-/router-3.0.11.tgz#7ab5ebab805c6f4477de053203f6037ff77ed7a9"
+    integrity sha512-+GO8BbHic+yhM8TrFLIsOXqo0M5RqVgHBqJiyD/N2/1atCWZ+Z8fSr0NFqaxsPUgAkFS0eVOnhhwHXzvjvntzw==
+    dependencies:
+      "@tarojs/runtime" "^3.0.11"
+      history "^4.10.1"
+      universal-router "^8.3.0"
+      url-parse "^1.4.7"
+  
+  "@tarojs/router@3.6.17", "@tarojs/router@^3.0.11":
     version "3.6.17"
     resolved "https://registry.npmmirror.com/@tarojs/router/-/router-3.6.17.tgz#5081827fc884fa182ec090561401dd614a566b33"
     integrity sha512-2H/A5SDyGx7Bsa17obHiDAevwwhsbKCHp+0+vNY/VHhZTRRvd2MAmizEJQZWZDcUkz2XACFV00yHiQRZX4tetA==
@@ -2204,7 +2252,7 @@ Lockfile:
       "@tarojs/helper" "3.6.17"
       scss-bundle "^3.0.2"
   
-  "@tarojs/runtime@3.6.17":
+  "@tarojs/runtime@3.6.17", "@tarojs/runtime@^3.0.11":
     version "3.6.17"
     resolved "https://registry.npmmirror.com/@tarojs/runtime/-/runtime-3.6.17.tgz#f0f5c6fafc5008beb00858657b867530cd8e3679"
     integrity sha512-d8x53AcVkV5EWNKiDGF/71CRgLly76rHJVNatZdewW3+rm/iB0amIUusE++9tzcu4ONgP70cDBC8l1lvVOokAg==
@@ -2232,7 +2280,32 @@ Lockfile:
     resolved "https://registry.npmmirror.com/@tarojs/shared/-/shared-3.6.17.tgz#adb8947fd72097477bbfde6b753653a6adb81a43"
     integrity sha512-rWumnlh3OsL2p2Nby4N2OIKep6awR5n4hqxLQq7/QPdoSedNsndWZ/Q5zyE2bIHgpYMgytYEB48Sk6Tm+/+rPw==
   
-  "@tarojs/taro-h5@3.6.17":
+  "@tarojs/taro-alipay@2.1.0":
+    version "2.1.0"
+    resolved "https://registry.npmmirror.com/@tarojs/taro-alipay/-/taro-alipay-2.1.0.tgz#293ad0ef19165619a6495cfca5158121ea8bbdd6"
+    integrity sha512-10jHTOJvS8g8ImOKGxVWsI3EjNAdVywVpPz5NkPzffPYRACQiwbQUp2fiVTOMqm8/JoaAEY2ZZhu6Pr5QFWXmg==
+    dependencies:
+      "@tarojs/taro" "2.1.0"
+      "@tarojs/utils" "2.1.0"
+      lodash "^4.17.10"
+      prop-types "^15.6.1"
+  
+  "@tarojs/taro-h5@3.0.11":
+    version "3.0.11"
+    resolved "https://registry.npmmirror.com/@tarojs/taro-h5/-/taro-h5-3.0.11.tgz#71833c840701cb14365a79666027b10accc2d4a8"
+    integrity sha512-j5gQsyhdfJ9Z3+GmicYiJOY+37phqMApWtvnQtZjlPaEDKdWQlg9iTIxasHC4o5lOb+wE7BogTMEhIuNUBR17A==
+    dependencies:
+      "@tarojs/api" "^3.0.11"
+      "@tarojs/router" "^3.0.11"
+      "@tarojs/runtime" "^3.0.11"
+      base64-js "^1.3.0"
+      jsonp-retry "^1.0.3"
+      mobile-detect "^1.4.2"
+      raf "^3.4.1"
+      unfetch "^4.1.0"
+      whatwg-fetch "^2.0.4"
+  
+  "@tarojs/taro-h5@3.6.17", "@tarojs/taro-h5@^3.0.11":
     version "3.6.17"
     resolved "https://registry.npmmirror.com/@tarojs/taro-h5/-/taro-h5-3.6.17.tgz#b35908f4f87ff74ed5af509756edb6868af210d9"
     integrity sha512-om7UWwY34uNfxOgOorQDXUMK9p2Qq4LPgzuY1plWoLYvI0UlFgKkRf4tuU3FnWK7If3Mqf3YgOTgpyD9aMa1cA==
@@ -2260,7 +2333,72 @@ Lockfile:
       "@tarojs/taro" "3.6.17"
       loader-utils "^1.2.3"
   
-  "@tarojs/taro@3.6.17":
+  "@tarojs/taro-qq@2.1.0":
+    version "2.1.0"
+    resolved "https://registry.npmmirror.com/@tarojs/taro-qq/-/taro-qq-2.1.0.tgz#cffc97cabe0933e56986cd36448b02a2152043cc"
+    integrity sha512-Qmc6ZWHcnypEXmwsII1u6skdqpxEvbEAA8IGye3LPOHCLXEPDpKhnJznxoX+69IiYoyoXA/Wl2X0BFsnHImlOg==
+    dependencies:
+      "@tarojs/taro" "2.1.0"
+      "@tarojs/utils" "2.1.0"
+      lodash "^4.17.10"
+      prop-types "^15.6.1"
+  
+  "@tarojs/taro-quickapp@2.1.0":
+    version "2.1.0"
+    resolved "https://registry.npmmirror.com/@tarojs/taro-quickapp/-/taro-quickapp-2.1.0.tgz#9e3402cd010aa87468b08d059050cc5c8105c14e"
+    integrity sha512-W7DAzzLZXzNUNBWq3pBORDpIfeEFTVNcca13GVdKuwLgQYSUe2jF8sUtkORatoMpN5YkLIE9ArSo3s8aNOPwkQ==
+    dependencies:
+      "@tarojs/taro" "2.1.0"
+      "@tarojs/utils" "2.1.0"
+      lodash "^4.17.10"
+      prop-types "^15.6.1"
+  
+  "@tarojs/taro-swan@2.1.0":
+    version "2.1.0"
+    resolved "https://registry.npmmirror.com/@tarojs/taro-swan/-/taro-swan-2.1.0.tgz#b643f231464332efcb25618d72a1a86691cc269c"
+    integrity sha512-qJzdpCDlO1pTcBBMNcoBvjmJro/n5hm7ZA5edIR/7IBrFnsNncZP9N/sfF+o5SMTdOUysTHiRorWv5c93VO2fA==
+    dependencies:
+      "@tarojs/taro" "2.1.0"
+      "@tarojs/utils" "2.1.0"
+      lodash "^4.17.10"
+      prop-types "^15.6.1"
+  
+  "@tarojs/taro-tt@2.1.0":
+    version "2.1.0"
+    resolved "https://registry.npmmirror.com/@tarojs/taro-tt/-/taro-tt-2.1.0.tgz#d6a8cbf1ec163133858cfe5ddfffe3f6746480e0"
+    integrity sha512-yRXazd70XcHUDSBdZ29Jeq99gfcI24M/zJt5CASb0g3yKGVWOZ449pc6p0ytqDJI3wMZnojOs1GkqTvHaSCkxw==
+    dependencies:
+      "@tarojs/taro" "2.1.0"
+      "@tarojs/utils" "2.1.0"
+      lodash "^4.17.10"
+      prop-types "^15.6.1"
+  
+  "@tarojs/taro-weapp@2.1.0":
+    version "2.1.0"
+    resolved "https://registry.npmmirror.com/@tarojs/taro-weapp/-/taro-weapp-2.1.0.tgz#3ebb4a24d33cd6d0e8805cc7471227f846f33170"
+    integrity sha512-eRdPc+rmEbu5ke6XX5j7YEnIX0rSP6RRzEO1B7wovHYDpgFnvLedzGG95LSRr7BDxwkiC3M+PwLz3z5T6TH83w==
+    dependencies:
+      "@tarojs/taro" "2.1.0"
+      "@tarojs/utils" "2.1.0"
+      lodash "^4.17.10"
+      prop-types "^15.6.1"
+  
+  "@tarojs/taro@2.1.0":
+    version "2.1.0"
+    resolved "https://registry.npmmirror.com/@tarojs/taro/-/taro-2.1.0.tgz#0e07d1a6298a46cb9f0c9d10c4d05be5b4ef8892"
+    integrity sha512-qprmtTovr2g1Y8lfvzKbwaj4rERnorn1pjfClDNX8JUDV7cqXbrZteJgz5K1ZhjSCfmFm+o3NkXd9zhmHp59mw==
+    dependencies:
+      "@tarojs/utils" "2.1.0"
+  
+  "@tarojs/taro@3.0.11":
+    version "3.0.11"
+    resolved "https://registry.npmmirror.com/@tarojs/taro/-/taro-3.0.11.tgz#ef97540a25b917a30a8e1f25d70a4c87c9140936"
+    integrity sha512-Goeb1ciGsKvkLHO0jjwsyaVae5gmK5cLPs8nSzN9AwGoXP1EfQd0OTyBsaeKR9pn9m+UN+Gv/N9ZMfELh7RJ/A==
+    dependencies:
+      "@tarojs/api" "^3.0.11"
+      "@tarojs/taro-h5" "^3.0.11"
+  
+  "@tarojs/taro@3.6.17", "@tarojs/taro@^3.0.11":
     version "3.6.17"
     resolved "https://registry.npmmirror.com/@tarojs/taro/-/taro-3.6.17.tgz#0bcd92a76afc4790b76eca5c2c4d3f7c42ffb871"
     integrity sha512-qcKal6SsFguG3hb/8I4cn5qT60wyqmcohv48ZDg6GFnRSJbmidxcVfyWyGIZgQdJW2QBlyivQNp9w1K9n31I8g==
@@ -2296,6 +2434,11 @@ Lockfile:
       "@babel/runtime" "^7.21.5"
       babel-jest "^29.5.0"
       pretty-format "^29.5.0"
+  
+  "@tarojs/utils@2.1.0":
+    version "2.1.0"
+    resolved "https://registry.npmmirror.com/@tarojs/utils/-/utils-2.1.0.tgz#7e7527937f0b5a0d51a3bc82d4c8a2d73c01897b"
+    integrity sha512-Y+bkeotCVujudIf4MehfU5qIhYC2HsV16AK3KjgnfXmhL7mo0sbytnwnpTFkza6nc5YDyQ9YPYKuf6btO+uOKA==
   
   "@tarojs/webpack5-prebundle@3.6.17":
     version "3.6.17"
@@ -2556,6 +2699,18 @@ Lockfile:
     dependencies:
       "@types/node" "*"
   
+  "@types/history@*":
+    version "5.0.0"
+    resolved "https://registry.npmmirror.com/@types/history/-/history-5.0.0.tgz#29f919f0c8e302763798118f45b19cab4a886f14"
+    integrity sha512-hy8b7Y1J8OGe6LbAjj3xniQrj3v6lsivCcrmf4TzSgPzLkhIeKgc5IZnT7ReIqmEuodjfO8EYAuoFvIrHi/+jQ==
+    dependencies:
+      history "*"
+  
+  "@types/history@^4.7.11":
+    version "4.7.11"
+    resolved "https://registry.npmmirror.com/@types/history/-/history-4.7.11.tgz#56588b17ae8f50c53983a524fc3cc47437969d64"
+    integrity sha512-qjDJRrmvBMiTx+jyLxvLfJU7UznFuokDv4f3WRuriHKERccVpFU+8XMQUAbDzoiJCsmexxRExQeMwwCdamSKDA==
+  
   "@types/html-minifier-terser@^6.0.0":
     version "6.1.0"
     resolved "https://registry.npmmirror.com/@types/html-minifier-terser/-/html-minifier-terser-6.1.0.tgz#4fc33a00c1d0c16987b1a20cf92d20614c55ac35"
@@ -2572,6 +2727,11 @@ Lockfile:
     integrity sha512-kQtujO08dVtQ2wXAuSFfk9ASy3sug4+ogFR8Kd8UgP8PEuc1/G/8yjYRmp//PcDNJEUKOza/MrQu15bouEUCiw==
     dependencies:
       "@types/node" "*"
+  
+  "@types/isomorphic-fetch@^0.0.34":
+    version "0.0.34"
+    resolved "https://registry.npmmirror.com/@types/isomorphic-fetch/-/isomorphic-fetch-0.0.34.tgz#3c3483e606c041378438e951464f00e4e60706d6"
+    integrity sha512-BmJKuPCZCR6pbYYgi5nKFJrPC4pLoBgsi/B1nFN64Ba+hLLGUcKPIh7eVlR2xG763Ap08hgQafq/Wx4RFb0omQ==
   
   "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0", "@types/istanbul-lib-coverage@^2.0.1":
     version "2.0.4"
@@ -2700,6 +2860,42 @@ Lockfile:
     version "1.2.5"
     resolved "https://registry.npmmirror.com/@types/range-parser/-/range-parser-1.2.5.tgz#38bd1733ae299620771bd414837ade2e57757498"
     integrity sha512-xrO9OoVPqFuYyR/loIHjnbvvyRZREYKLjxV4+dY6v3FQR3stQ9ZxIGkaclF7YhI9hfjpuTbu14hZEy94qKLtOA==
+  
+  "@types/react-router-dom@^4.2.7":
+    version "4.3.5"
+    resolved "https://registry.npmmirror.com/@types/react-router-dom/-/react-router-dom-4.3.5.tgz#72f229967690c890d00f96e6b85e9ee5780db31f"
+    integrity sha512-eFajSUASYbPHg2BDM1G8Btx+YqGgvROPIg6sBhl3O4kbDdYXdFdfrgQFf/pcBuQVObjfT9AL/dd15jilR5DIEA==
+    dependencies:
+      "@types/history" "*"
+      "@types/react" "*"
+      "@types/react-router" "*"
+  
+  "@types/react-router-redux@^5.0.13":
+    version "5.0.23"
+    resolved "https://registry.npmmirror.com/@types/react-router-redux/-/react-router-redux-5.0.23.tgz#a2960e7c6188608e99be3cb546f6d0f3709f3002"
+    integrity sha512-VkoJoUNVnjOq8rNEFfNGXoEa+7LoGqQaTsqVfSPha+9SKl7kyFVKG4P3kZhCt6pXDCMQZ0so9Q20El9gvFgA/g==
+    dependencies:
+      "@types/history" "^4.7.11"
+      "@types/react" "*"
+      "@types/react-router" "^5.1.0"
+      redux ">= 3.7.2"
+  
+  "@types/react-router@*", "@types/react-router@^5.1.0":
+    version "5.1.20"
+    resolved "https://registry.npmmirror.com/@types/react-router/-/react-router-5.1.20.tgz#88eccaa122a82405ef3efbcaaa5dcdd9f021387c"
+    integrity sha512-jGjmu/ZqS7FjSH6owMcD5qpq19+1RS9DeVRqfl1FeBMxTDQAGwlMWOcs52NDoXaNKyG3d1cYQFMs9rCrb88o9Q==
+    dependencies:
+      "@types/history" "^4.7.11"
+      "@types/react" "*"
+  
+  "@types/react@*":
+    version "18.2.27"
+    resolved "https://registry.npmmirror.com/@types/react/-/react-18.2.27.tgz#746e52b06f3ccd5d7a724fd53769b70792601440"
+    integrity sha512-Wfv7B7FZiR2r3MIqbAlXoY1+tXm4bOqfz4oRr+nyXdBqapDBZ0l/IGcSlAfvxIHEEJjkPU0MYAc/BlFPOcrgLw==
+    dependencies:
+      "@types/prop-types" "*"
+      "@types/scheduler" "*"
+      csstype "^3.0.2"
   
   "@types/react@^18.0.0":
     version "18.2.24"
@@ -3166,11 +3362,6 @@ Lockfile:
       require-from-string "^2.0.2"
       uri-js "^4.2.2"
   
-  amdefine@>=0.0.4:
-    version "1.0.1"
-    resolved "https://registry.npmmirror.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
-    integrity sha512-S2Hw0TtNkMJhIabBwIojKL9YHO5T0n5eNqWJ7Lrlel/zDbftQpxpapi8tZs3X1HWa+u+QeydGmzzNU0m09+Rcg==
-  
   ansi-align@^3.0.0:
     version "3.0.1"
     resolved "https://registry.npmmirror.com/ansi-align/-/ansi-align-3.0.1.tgz#0cdf12e111ace773a86e9a1fad1225c43cb19a59"
@@ -3404,11 +3595,6 @@ Lockfile:
     resolved "https://registry.npmmirror.com/async/-/async-3.2.4.tgz#2d22e00f8cddeb5fde5dd33522b56d1cf569a81c"
     integrity sha512-iAB+JbDEGXhyIUavoDl9WP/Jj106Kz9DEn1DPgYw5ruDn0e3Wgi3sKFm55sASdGBNOQB8F59d9qQ7deqrHA8wQ==
   
-  async@~0.2.6:
-    version "0.2.10"
-    resolved "https://registry.npmmirror.com/async/-/async-0.2.10.tgz#b6bbe0b0674b9d719708ca38de8c237cb526c3d1"
-    integrity sha512-eAkdoKxU6/LkKDBzLpT+t6Ff5EtfSF4wx1WfJiPEEV7WNLnDaRXk0oVysiEPm262roaachGexwUv94WhSgN5TQ==
-  
   asynciterator.prototype@^1.0.0:
     version "1.0.0"
     resolved "https://registry.npmmirror.com/asynciterator.prototype/-/asynciterator.prototype-1.0.0.tgz#8c5df0514936cdd133604dfcc9d3fb93f09b2b62"
@@ -3619,6 +3805,14 @@ Lockfile:
       metro-react-native-babel-preset "^0.72.1"
       react-refresh "^0.11.0"
   
+  babel-runtime@^6.0.0, babel-runtime@^6.23.0:
+    version "6.26.0"
+    resolved "https://registry.npmmirror.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
+    integrity sha512-ITKNuq2wKlW1fJg9sSW52eepoYgZBggvOAHC0u/CYu/qxQ9EVzThCgR69BnSXLHjy2f7SY5zaQ4yt7H9ZVxY2g==
+    dependencies:
+      core-js "^2.4.0"
+      regenerator-runtime "^0.11.0"
+  
   balanced-match@^1.0.0:
     version "1.0.2"
     resolved "https://registry.npmmirror.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
@@ -3645,6 +3839,13 @@ Lockfile:
     integrity sha512-qeFIXtP4MSoi6NLqO12WfqARWWuCKi2Rn/9hJLEmtB5yTNr9DqFWkJRCf2qShWzPeAMRnOgCrq0sg/KLv5ES9w==
     dependencies:
       tweetnacl "^0.14.3"
+  
+  better-scroll@^1.14.1:
+    version "1.15.2"
+    resolved "https://registry.npmmirror.com/better-scroll/-/better-scroll-1.15.2.tgz#65ffc6058b8b4ff337b8dfad4bcb334d7699ceb6"
+    integrity sha512-sSY2N8I9/B+YX/9JpIz6pMQYnmBuvspBqZG4UxYaQEfz/ZWrnxwdyKLL4t6IKpFmxqtZadVypXw7vSSHxBZpBQ==
+    dependencies:
+      babel-runtime "^6.0.0"
   
   big.js@^5.2.2:
     version "5.2.2"
@@ -4051,7 +4252,7 @@ Lockfile:
     resolved "https://registry.npmmirror.com/cjs-module-lexer/-/cjs-module-lexer-1.2.3.tgz#6c370ab19f8a3394e318fe682686ec0ac684d107"
     integrity sha512-0TNiGstbQmCFwt4akjjBg5pLRTSyj/PkWQ1ZoO2zntmg9yLqSRxwEa4iCfQLGjqhiqBfOJa7W/E8wfGrTDmlZQ==
   
-  classnames@^2.2.5:
+  classnames@^2.2.5, classnames@^2.2.6:
     version "2.3.2"
     resolved "https://registry.npmmirror.com/classnames/-/classnames-2.3.2.tgz#351d813bf0137fcc6a76a16b88208d2560a0d924"
     integrity sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==
@@ -4409,6 +4610,11 @@ Lockfile:
     resolved "https://registry.npmmirror.com/core-js-pure/-/core-js-pure-3.33.0.tgz#938a28754b4d82017a7a8cbd2727b1abecc63591"
     integrity sha512-FKSIDtJnds/YFIEaZ4HszRX7hkxGpNKM7FC9aJ9WLJbSd3lD4vOltFuVIBLR8asSx9frkTSqL0dw90SKQxgKrg==
   
+  core-js@^2.4.0, core-js@^2.5.3:
+    version "2.6.12"
+    resolved "https://registry.npmmirror.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
+    integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
+  
   core-js@^3.6.5:
     version "3.33.0"
     resolved "https://registry.npmmirror.com/core-js/-/core-js-3.33.0.tgz#70366dbf737134761edb017990cf5ce6c6369c40"
@@ -4700,6 +4906,11 @@ Lockfile:
       abab "^2.0.6"
       whatwg-mimetype "^3.0.0"
       whatwg-url "^12.0.0"
+  
+  dayjs@^1.11.10, dayjs@^1.7.7:
+    version "1.11.10"
+    resolved "https://registry.npmmirror.com/dayjs/-/dayjs-1.11.10.tgz#68acea85317a6e164457d6d6947564029a6a16a0"
+    integrity sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==
   
   debug@2.6.9:
     version "2.6.9"
@@ -5032,6 +5243,18 @@ Lockfile:
       domhandler "^4.2.0"
       entities "^2.0.0"
   
+  dom-walk@^0.1.0:
+    version "0.1.2"
+    resolved "https://registry.npmmirror.com/dom-walk/-/dom-walk-0.1.2.tgz#0c548bef048f4d1f2a97249002236060daa3fd84"
+    integrity sha512-6QvTW9mrGeIegrFXdtQi9pk7O/nSK6lSdXW2eqUspN5LWD7UTji2Fqw5V2YLjBpHEoU9Xl/eUWNpDeZvoyOv2w==
+  
+  dom7@^2.1.2:
+    version "2.1.5"
+    resolved "https://registry.npmmirror.com/dom7/-/dom7-2.1.5.tgz#a79411017800b31d8400070cdaebbfc92c1f6377"
+    integrity sha512-xnhwVgyOh3eD++/XGtH+5qBwYTgCm0aW91GFgPJ3XG+jlsRLyJivnbP0QmUBFhI+Oaz9FV0s7cxgXHezwOEBYA==
+    dependencies:
+      ssr-window "^2.0.0"
+  
   dom7@^3.0.0:
     version "3.0.0"
     resolved "https://registry.npmmirror.com/dom7/-/dom7-3.0.0.tgz#b861ce5d67a6becd7aaa3ad02942ff14b1240331"
@@ -5124,6 +5347,52 @@ Lockfile:
     resolved "https://registry.npmmirror.com/duplexer3/-/duplexer3-0.1.5.tgz#0b5e4d7bad5de8901ea4440624c8e1d20099217e"
     integrity sha512-1A8za6ws41LQgv9HrE/66jyC5yuSjQ3L/KOpFtoBilsAK2iA2wuS5rTt1OCzIvtS2V7nVmedsUU+DGRcjBmOYA==
   
+  dva-core@2.0.4:
+    version "2.0.4"
+    resolved "https://registry.npmmirror.com/dva-core/-/dva-core-2.0.4.tgz#086665d1d5f684e089c5bfac9ba388d91cc9050a"
+    integrity sha512-Zh39llFyItu9HKXKfCZVf9UFtDTcypdAjGBew1S+wK8BGVzFpm1GPTdd6uIMeg7O6STtCvt2Qv+RwUut1GFynA==
+    dependencies:
+      "@babel/runtime" "^7.0.0"
+      flatten "^1.0.2"
+      global "^4.3.2"
+      invariant "^2.2.1"
+      is-plain-object "^2.0.3"
+      redux-saga "^0.16.0"
+      warning "^3.0.0"
+  
+  dva-core@^1.4.0:
+    version "1.4.0"
+    resolved "https://registry.npmmirror.com/dva-core/-/dva-core-1.4.0.tgz#30aed800b97f07f768e42049094ee3150f48c5d3"
+    integrity sha512-g1CnnF80+oGTUv9qZCc5vndkPHwoODiAGzdcGFMbT78+SmrbYgbvO5wyRBGvebmLYyaTJt4tLqvHIP+UYJoxkQ==
+    dependencies:
+      "@babel/runtime" "7.0.0-beta.46"
+      flatten "^1.0.2"
+      global "^4.3.2"
+      invariant "^2.2.1"
+      is-plain-object "^2.0.3"
+      redux "^3.7.1"
+      redux-saga "^0.16.0"
+      warning "^3.0.0"
+  
+  dva@2.4.1:
+    version "2.4.1"
+    resolved "https://registry.npmmirror.com/dva/-/dva-2.4.1.tgz#a3eeb07bb8bc6e2ff9ffe31799d03cb69e45f5fd"
+    integrity sha512-ggj/P4lYa+7GBZuNua2Sn8rDjhbb2Mjt9THUKlunSYSBwIVU5xFIBkCB87JBPc274ojL9h/hKOmVFVFlWzlRpg==
+    dependencies:
+      "@babel/runtime" "7.0.0-beta.46"
+      "@types/isomorphic-fetch" "^0.0.34"
+      "@types/react-router-dom" "^4.2.7"
+      "@types/react-router-redux" "^5.0.13"
+      dva-core "^1.4.0"
+      global "^4.3.2"
+      history "^4.6.3"
+      invariant "^2.2.2"
+      isomorphic-fetch "^2.2.1"
+      react-redux "5.0.7"
+      react-router-dom "^4.1.2"
+      react-router-redux "5.0.0-alpha.9"
+      redux "^3.7.2"
+  
   eastasianwidth@^0.2.0:
     version "0.2.0"
     resolved "https://registry.npmmirror.com/eastasianwidth/-/eastasianwidth-0.2.0.tgz#696ce2ec0aa0e6ea93a397ffcf24aa7840c827cb"
@@ -5178,6 +5447,13 @@ Lockfile:
     version "1.0.2"
     resolved "https://registry.npmmirror.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
     integrity sha512-TPJXq8JqFaVYm2CWmPvnP2Iyo4ZSM7/QKcSmuMLDObfpH5fi7RUGmd/rTDf+rut/saiDiQEeVTNgAmJEdAOx0w==
+  
+  encoding@^0.1.11:
+    version "0.1.13"
+    resolved "https://registry.npmmirror.com/encoding/-/encoding-0.1.13.tgz#56574afdd791f54a8e9b2785c0582a2d26210fa9"
+    integrity sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==
+    dependencies:
+      iconv-lite "^0.6.2"
   
   end-of-stream@^1.0.0, end-of-stream@^1.1.0:
     version "1.4.4"
@@ -6130,6 +6406,11 @@ Lockfile:
     resolved "https://registry.npmmirror.com/flatted/-/flatted-3.2.9.tgz#7eb4c67ca1ba34232ca9d2d93e9886e611ad7daf"
     integrity sha512-36yxDn5H7OFZQla0/jFJmbIKTdZAQHngCedGxiMmpNfEZM0sdEeT+WczLQrjK6D7o2aiyLYDnkw0R3JK0Qv1RQ==
   
+  flatten@^1.0.2:
+    version "1.0.3"
+    resolved "https://registry.npmmirror.com/flatten/-/flatten-1.0.3.tgz#c1283ac9f27b368abc1e36d1ff7b04501a30356b"
+    integrity sha512-dVsPA/UwQ8+2uoFe5GHtiBMu48dWLTdsuEd7CKGlZlD78r1TTWBvDuFaFGKCo/ZfEr95Uk56vZoX86OsHkUeIg==
+  
   follow-redirects@^1.0.0:
     version "1.15.3"
     resolved "https://registry.npmmirror.com/follow-redirects/-/follow-redirects-1.15.3.tgz#fe2f3ef2690afce7e82ed0b44db08165b207123a"
@@ -6421,6 +6702,14 @@ Lockfile:
       kind-of "^6.0.2"
       which "^1.3.1"
   
+  global@^4.3.2:
+    version "4.4.0"
+    resolved "https://registry.npmmirror.com/global/-/global-4.4.0.tgz#3e7b105179006a323ed71aafca3e9c57a5cc6406"
+    integrity sha512-wv/LAoHdRE3BeTGz53FAamhGlPLhlssK45usmGFThIi4XqnBmjKQ16u+RNbP7WvigRZDxUsM0J3gcQ5yicaL0w==
+    dependencies:
+      min-document "^2.19.0"
+      process "^0.11.10"
+  
   globals@^11.1.0:
     version "11.12.0"
     resolved "https://registry.npmmirror.com/globals/-/globals-11.12.0.tgz#ab8795338868a0babd8525758018c2a7eb95c42e"
@@ -6651,17 +6940,41 @@ Lockfile:
     resolved "https://registry.npmmirror.com/highlight.js/-/highlight.js-10.7.3.tgz#697272e3991356e40c3cac566a74eef681756531"
     integrity sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==
   
-  history@^5.1.0:
+  history@*, history@^5.1.0:
     version "5.3.0"
     resolved "https://registry.npmmirror.com/history/-/history-5.3.0.tgz#1548abaa245ba47992f063a0783db91ef201c73b"
     integrity sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==
     dependencies:
       "@babel/runtime" "^7.7.6"
   
+  history@^4.10.1, history@^4.6.3, history@^4.7.2:
+    version "4.10.1"
+    resolved "https://registry.npmmirror.com/history/-/history-4.10.1.tgz#33371a65e3a83b267434e2b3f3b1b4c58aad4cf3"
+    integrity sha512-36nwAD620w12kuzPAsyINPWJqlNbij+hpK1k9XRloDtym8mxzGYl2c17LnV6IAGB2Dmg4tEa7G7DlawS0+qjew==
+    dependencies:
+      "@babel/runtime" "^7.1.2"
+      loose-envify "^1.2.0"
+      resolve-pathname "^3.0.0"
+      tiny-invariant "^1.0.2"
+      tiny-warning "^1.0.0"
+      value-equal "^1.0.1"
+  
   hls.js@^1.1.5:
     version "1.4.12"
     resolved "https://registry.npmmirror.com/hls.js/-/hls.js-1.4.12.tgz#2022daa29d10c662387d80a5297f8330f8ef5ee2"
     integrity sha512-1RBpx2VihibzE3WE9kGoVCtrhhDWTzydzElk/kyRbEOLnb1WIE+3ZabM/L8BqKFTCL3pUy4QzhXgD1Q6Igr1JA==
+  
+  hoist-non-react-statics@^2.5.0:
+    version "2.5.5"
+    resolved "https://registry.npmmirror.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
+    integrity sha512-rqcy4pJo55FTTLWt+bU8ukscqHeE/e9KWvsOW2b/a3afxQZhwkQdT1rPPCJ0rYXdj4vNcasY8zHTH+jF/qStxw==
+  
+  hoist-non-react-statics@^3.3.0:
+    version "3.3.2"
+    resolved "https://registry.npmmirror.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
+    integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
+    dependencies:
+      react-is "^16.7.0"
   
   homedir-polyfill@^1.0.1:
     version "1.0.3"
@@ -6870,7 +7183,7 @@ Lockfile:
     dependencies:
       safer-buffer ">= 2.1.2 < 3"
   
-  iconv-lite@0.6.3, iconv-lite@^0.6.3:
+  iconv-lite@0.6.3, iconv-lite@^0.6.2, iconv-lite@^0.6.3:
     version "0.6.3"
     resolved "https://registry.npmmirror.com/iconv-lite/-/iconv-lite-0.6.3.tgz#a52f80bf38da1952eb5c681790719871a1a72501"
     integrity sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==
@@ -7035,6 +7348,13 @@ Lockfile:
     dependencies:
       from2 "^2.1.1"
       p-is-promise "^1.1.0"
+  
+  invariant@^2.0.0, invariant@^2.2.1, invariant@^2.2.2, invariant@^2.2.4:
+    version "2.2.4"
+    resolved "https://registry.npmmirror.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
+    integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
+    dependencies:
+      loose-envify "^1.0.0"
   
   ipaddr.js@1.9.1:
     version "1.9.1"
@@ -7246,7 +7566,7 @@ Lockfile:
     resolved "https://registry.npmmirror.com/is-plain-obj/-/is-plain-obj-3.0.0.tgz#af6f2ea14ac5a646183a5bbdb5baabbc156ad9d7"
     integrity sha512-gwsOE28k+23GP1B6vFl1oVh/WOzmawBrKwo5Ev6wMKzPkaXaCDIQKzLnvsA42DRlbVTWorkgTKIviAKCWkfUwA==
   
-  is-plain-object@^2.0.4:
+  is-plain-object@^2.0.3, is-plain-object@^2.0.4:
     version "2.0.4"
     resolved "https://registry.npmmirror.com/is-plain-object/-/is-plain-object-2.0.4.tgz#2c163b3fafb1b606d9d17928f05c2a1c38e07677"
     integrity sha512-h5PpgXkWitc38BBMYawTYMWJHFZJVnBquFE57xFpjB8pJFiF6gZ+bU+WyI/yqXiFR5mdLsgYNaPe8uao6Uv9Og==
@@ -7293,7 +7613,7 @@ Lockfile:
     dependencies:
       call-bind "^1.0.2"
   
-  is-stream@^1.1.0:
+  is-stream@^1.0.1, is-stream@^1.1.0:
     version "1.1.0"
     resolved "https://registry.npmmirror.com/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
     integrity sha512-uQPm8kcs47jx38atAcWTVxyltQYoPT68y9aWYdV6yWXSyW8mzSat0TL6CiWdZeCdF3KrAvpVtnHbTv4RN+rqdQ==
@@ -7386,6 +7706,11 @@ Lockfile:
     resolved "https://registry.npmmirror.com/is-yarn-global/-/is-yarn-global-0.3.0.tgz#d502d3382590ea3004893746754c89139973e232"
     integrity sha512-VjSeb/lHmkoyd8ryPVIKvOCn4D1koMqY+vqyjjUfc3xyKtP4dYOxM44sZrnqQSzSds3xyOrUTLTC9LVCVgLngw==
   
+  isarray@0.0.1:
+    version "0.0.1"
+    resolved "https://registry.npmmirror.com/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
+    integrity sha512-D2S+3GLxWH+uhrNEcoh/fnmYeP8E8/zHl644d/jdA0g2uyXvy3sb0qxotE+ne0LtccHknQzWwZEzhak7oJ0COQ==
+  
   isarray@^2.0.5:
     version "2.0.5"
     resolved "https://registry.npmmirror.com/isarray/-/isarray-2.0.5.tgz#8af1e4c1221244cc62459faf38940d4e644a5723"
@@ -7410,6 +7735,14 @@ Lockfile:
     version "3.0.1"
     resolved "https://registry.npmmirror.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
     integrity sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg==
+  
+  isomorphic-fetch@^2.2.1:
+    version "2.2.1"
+    resolved "https://registry.npmmirror.com/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
+    integrity sha512-9c4TNAKYXM5PRyVcwUZrF3W09nQ+sO7+jydgs4ZGW9dhsLG2VOlISJABombdQqQRXCwuYG3sYV/puGf5rp0qmA==
+    dependencies:
+      node-fetch "^1.0.1"
+      whatwg-fetch ">=0.10.0"
   
   isstream@~0.1.2:
     version "0.1.2"
@@ -8369,7 +8702,7 @@ Lockfile:
     dependencies:
       p-locate "^5.0.0"
   
-  lodash-es@4.17.21:
+  lodash-es@4.17.21, lodash-es@^4.17.5, lodash-es@^4.2.1:
     version "4.17.21"
     resolved "https://registry.npmmirror.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
     integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
@@ -8404,7 +8737,7 @@ Lockfile:
     resolved "https://registry.npmmirror.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
     integrity sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==
   
-  "lodash@4.6.1 || ^4.16.1", lodash@^4.17.11, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21:
+  "lodash@4.6.1 || ^4.16.1", lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.5, lodash@^4.2.1:
     version "4.17.21"
     resolved "https://registry.npmmirror.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
     integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -8443,7 +8776,7 @@ Lockfile:
     resolved "https://registry.npmmirror.com/long/-/long-5.2.3.tgz#a3ba97f3877cf1d778eccbcb048525ebb77499e1"
     integrity sha512-lcHwpNoggQTObv5apGNCTdJrO69eHOZMi4BNC+rTLER8iHAqGrUVeLh/irVIM7zTw2bOXA8T6uNPeujwOLg/2Q==
   
-  loose-envify@^1.1.0, loose-envify@^1.4.0:
+  loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.2.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
     version "1.4.0"
     resolved "https://registry.npmmirror.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
     integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
@@ -8779,6 +9112,13 @@ Lockfile:
     resolved "https://registry.npmmirror.com/mimic-response/-/mimic-response-1.0.1.tgz#4923538878eef42063cb8a3e3b0798781487ab1b"
     integrity sha512-j5EctnkH7amfV/q5Hgmoal1g2QHFJRraOtmx0JpIqkxhBhI/lJSl1nMpQ45hVarwNETOoWEimndZ4QK0RHxuxQ==
   
+  min-document@^2.19.0:
+    version "2.19.0"
+    resolved "https://registry.npmmirror.com/min-document/-/min-document-2.19.0.tgz#7bd282e3f5842ed295bb748cdd9f1ffa2c824685"
+    integrity sha512-9Wy1B3m3f66bPPmU5hdA4DR4PB2OfDU/+GS3yAB7IQozE3tqXaVv2zOjgla7MEGSRv95+ILmOuvhLkOK6wJtCQ==
+    dependencies:
+      dom-walk "^0.1.0"
+  
   min-indent@^1.0.0:
     version "1.0.1"
     resolved "https://registry.npmmirror.com/min-indent/-/min-indent-1.0.1.tgz#a63f681673b30571fbe8bc25686ae746eefa9869"
@@ -8998,6 +9338,33 @@ Lockfile:
     resolved "https://registry.npmmirror.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
     integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
   
+  nerv-devtools@^1.5.7:
+    version "1.5.7"
+    resolved "https://registry.npmmirror.com/nerv-devtools/-/nerv-devtools-1.5.7.tgz#6321721ba3052d8e917f1868da1d10c132d44209"
+    integrity sha512-0EgQfMAARzhEy8qjU4JqVDu00fb84XHVY4qBGkCbsg/EmVD7ZzLar1e27VRD+juMAIc1QPSMS8wlariwDblAPA==
+    dependencies:
+      nerv-shared "1.4.0"
+      nerv-utils "1.4.5"
+      nervjs "1.5.7"
+  
+  nerv-shared@1.4.0:
+    version "1.4.0"
+    resolved "https://registry.npmmirror.com/nerv-shared/-/nerv-shared-1.4.0.tgz#4ae903f215888ab886b3d04ae3b95d5327e67f43"
+    integrity sha512-cCyeP1hnnnMfM5HRcmMKconGwI8Wl0xwekAU4DvqDC1M8NxCOF4TwDmedgdgyNt9EkWNbiotBRUV5zJsbfOQWA==
+  
+  nerv-utils@1.4.5:
+    version "1.4.5"
+    resolved "https://registry.npmmirror.com/nerv-utils/-/nerv-utils-1.4.5.tgz#3e017a8a1b605b35ee31ad396a038207fbc597b0"
+    integrity sha512-9XeifC0l+aDXhA0aXcklxS2o7o87xJxMQAl1+iIHrD5Sei/61ubap0oOzb4t9VMhSEvwWm4/rJRd8PGMKZiwiA==
+  
+  nervjs@1.5.7, nervjs@^1.5.7:
+    version "1.5.7"
+    resolved "https://registry.npmmirror.com/nervjs/-/nervjs-1.5.7.tgz#29798a8e1473b33329b9d2af4022d8818c7ff4cd"
+    integrity sha512-x+hGSOETqA+7lbChW+c/NIXEMrCCvm6IaEHlDbZmaNVX0TAyKZinRIHcYr7o5K/pA4qGWjJQmjoNyx+Mx+rVLg==
+    dependencies:
+      nerv-shared "1.4.0"
+      nerv-utils "1.4.5"
+  
   no-case@^2.2.0:
     version "2.3.2"
     resolved "https://registry.npmmirror.com/no-case/-/no-case-2.3.2.tgz#60b813396be39b3f1288a4c1ed5d1e7d28b464ac"
@@ -9019,6 +9386,14 @@ Lockfile:
     integrity sha512-wo2DpQkQp7Sjm2A0cq+sN7EHKO6Sl0ctXeBdFZrL9T9+UywORbufTcTZxom8YqpLQt/FqNMUkOpkZrJVYSKD3A==
     dependencies:
       lodash "^4.17.21"
+  
+  node-fetch@^1.0.1:
+    version "1.7.3"
+    resolved "https://registry.npmmirror.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
+    integrity sha512-NhZ4CsKx7cYm2vSrBAr2PvFOe6sWDf0UYLRqA6svUYg7+/TSfVAu49jYC4BvQ4Sms9SZgdqGBgroqfDhJdTyKQ==
+    dependencies:
+      encoding "^0.1.11"
+      is-stream "^1.0.1"
   
   node-forge@^1:
     version "1.3.1"
@@ -9236,6 +9611,13 @@ Lockfile:
     resolved "https://registry.npmmirror.com/obuf/-/obuf-1.1.2.tgz#09bea3343d41859ebd446292d11c9d4db619084e"
     integrity sha512-PX1wu0AmAdPqOL1mWhqmlOd8kOIZQwGZw6rh7uby9fTc5lhaOWFLX3I6R1hrF9k3zUY40e6igsLGkDXK92LJNg==
   
+  omit.js@^1.0.0:
+    version "1.0.2"
+    resolved "https://registry.npmmirror.com/omit.js/-/omit.js-1.0.2.tgz#91a14f0eba84066dfa015bf30e474c47f30bc858"
+    integrity sha512-/QPc6G2NS+8d4L/cQhbk6Yit1WTB6Us2g84A7A/1+w9d/eRGHyEqC5kkQtHVoHZ5NFWGG7tUGgrhVZwgZanKrQ==
+    dependencies:
+      babel-runtime "^6.23.0"
+  
   on-finished@2.4.1:
     version "2.4.1"
     resolved "https://registry.npmmirror.com/on-finished/-/on-finished-2.4.1.tgz#58c8c44116e54845ad57f14ab10b03533184ac3f"
@@ -9277,13 +9659,6 @@ Lockfile:
       define-lazy-prop "^2.0.0"
       is-docker "^2.1.1"
       is-wsl "^2.2.0"
-  
-  optimist@~0.3.5:
-    version "0.3.7"
-    resolved "https://registry.npmmirror.com/optimist/-/optimist-0.3.7.tgz#c90941ad59e4273328923074d2cf2e7cbc6ec0d9"
-    integrity sha512-TCx0dXQzVtSCg2OgY/bO9hjM9cV4XYx09TVK+s3+FhkjT6LovsLe+pPMzpWf+6yXK/hUizs2gUoTw3jHM0VaTQ==
-    dependencies:
-      wordwrap "~0.0.2"
   
   optionator@^0.9.1, optionator@^0.9.3:
     version "0.9.3"
@@ -9538,6 +9913,13 @@ Lockfile:
     version "0.1.7"
     resolved "https://registry.npmmirror.com/path-to-regexp/-/path-to-regexp-0.1.7.tgz#df604178005f522f15eb4490e7247a1bfaa67f8c"
     integrity sha512-5DFkuoqlv1uYQKxy8omFBeJPQcdoE07Kv2sferDCrAq1ohOU+MSDswDIbnx3YAM60qIOnYa53wBhXW0EbMonrQ==
+  
+  path-to-regexp@^1.7.0:
+    version "1.8.0"
+    resolved "https://registry.npmmirror.com/path-to-regexp/-/path-to-regexp-1.8.0.tgz#887b3ba9d84393e87a0a0b9f4cb756198b53548a"
+    integrity sha512-n43JRhlUKUAlibEJhPeir1ncUID16QnEjNpwzNdO3Lm4ywrBpBZ5oLD0I6br9evr1Y9JTqwRtAh7JLoOzAQdVA==
+    dependencies:
+      isarray "0.0.1"
   
   path-to-regexp@^3.1.0:
     version "3.2.0"
@@ -10019,10 +10401,20 @@ Lockfile:
     resolved "https://registry.npmmirror.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
     integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
   
+  process@^0.11.10:
+    version "0.11.10"
+    resolved "https://registry.npmmirror.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
+    integrity sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==
+  
   promise-polyfill@^7.1.0:
     version "7.1.2"
     resolved "https://registry.npmmirror.com/promise-polyfill/-/promise-polyfill-7.1.2.tgz#ab05301d8c28536301622d69227632269a70ca3b"
     integrity sha512-FuEc12/eKqqoRYIGBrUptCBRhobL19PS2U31vMNTfyck1FxPyMfgsXyW4Mav85y/ZN1hop3hOwRlUDok23oYfQ==
+  
+  promise-prototype-finally@^1.0.0:
+    version "1.0.0"
+    resolved "https://registry.npmmirror.com/promise-prototype-finally/-/promise-prototype-finally-1.0.0.tgz#f1ce84328efb773fed19dd8a4344406da1cbe12d"
+    integrity sha512-r/NOO51lZ2q6yQ1lXRvl9uv5v+DzVhSFS7WzPlKb5YV9eHQiIa1+ao5XYe85VUzfYZOzZ2AnOpJqDC6L2uOlzg==
   
   prompts@^2.0.1:
     version "2.4.2"
@@ -10032,7 +10424,7 @@ Lockfile:
       kleur "^3.0.3"
       sisteransi "^1.0.5"
   
-  prop-types@^15.8.1:
+  prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
     version "15.8.1"
     resolved "https://registry.npmmirror.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
     integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -10145,6 +10537,13 @@ Lockfile:
     resolved "https://registry.npmmirror.com/quick-lru/-/quick-lru-4.0.1.tgz#5b8878f113a58217848c6482026c73e1ba57727f"
     integrity sha512-ARhCpm70fzdcvNQfPoy49IaanKkTlRWF2JMzqhcJbhSFRZv7nPTvZJdcY7301IPmvW+/p0RgIWnQDLJxifsQ7g==
   
+  raf@^3.4.1:
+    version "3.4.1"
+    resolved "https://registry.npmmirror.com/raf/-/raf-3.4.1.tgz#0742e99a4a6552f445d73e3ee0328af0ff1ede39"
+    integrity sha512-Sq4CW4QhwOHE8ucn6J34MqtZCeWFP2aQSmrlroYgqAV1PjStIhJXxYuTgUIfkEk7zTLjmIjLmU5q+fbD1NnOJA==
+    dependencies:
+      performance-now "^2.1.0"
+  
   randombytes@^2.1.0:
     version "2.1.0"
     resolved "https://registry.npmmirror.com/randombytes/-/randombytes-2.1.0.tgz#df6f84372f0270dc65cdf6291349ab7a473d4f2a"
@@ -10187,6 +10586,16 @@ Lockfile:
       minimist "^1.2.0"
       strip-json-comments "~2.0.1"
   
+  react-dom@^16.13.1:
+    version "16.14.0"
+    resolved "https://registry.npmmirror.com/react-dom/-/react-dom-16.14.0.tgz#7ad838ec29a777fb3c75c3a190f661cf92ab8b89"
+    integrity sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==
+    dependencies:
+      loose-envify "^1.1.0"
+      object-assign "^4.1.1"
+      prop-types "^15.6.2"
+      scheduler "^0.19.1"
+  
   react-dom@^18.0.0:
     version "18.2.0"
     resolved "https://registry.npmmirror.com/react-dom/-/react-dom-18.2.0.tgz#22aaf38708db2674ed9ada224ca4aa708d821e3d"
@@ -10195,7 +10604,7 @@ Lockfile:
       loose-envify "^1.1.0"
       scheduler "^0.23.0"
   
-  react-is@^16.13.1:
+  react-is@^16.13.1, react-is@^16.7.0, react-is@^16.9.0:
     version "16.13.1"
     resolved "https://registry.npmmirror.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
     integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
@@ -10218,6 +10627,29 @@ Lockfile:
       loose-envify "^1.1.0"
       scheduler "^0.21.0"
   
+  react-redux@5.0.7:
+    version "5.0.7"
+    resolved "https://registry.npmmirror.com/react-redux/-/react-redux-5.0.7.tgz#0dc1076d9afb4670f993ffaef44b8f8c1155a4c8"
+    integrity sha512-5VI8EV5hdgNgyjfmWzBbdrqUkrVRKlyTKk1sGH3jzM2M2Mhj/seQgPXaz6gVAj2lz/nz688AdTqMO18Lr24Zhg==
+    dependencies:
+      hoist-non-react-statics "^2.5.0"
+      invariant "^2.0.0"
+      lodash "^4.17.5"
+      lodash-es "^4.17.5"
+      loose-envify "^1.1.0"
+      prop-types "^15.6.0"
+  
+  react-redux@7.2.0:
+    version "7.2.0"
+    resolved "https://registry.npmmirror.com/react-redux/-/react-redux-7.2.0.tgz#f970f62192b3981642fec46fd0db18a074fe879d"
+    integrity sha512-EvCAZYGfOLqwV7gh849xy9/pt55rJXPwmYvI4lilPM5rUT/1NxuuN59ipdBksRVSvz0KInbPnp4IfoXJXCqiDA==
+    dependencies:
+      "@babel/runtime" "^7.5.5"
+      hoist-non-react-statics "^3.3.0"
+      loose-envify "^1.4.0"
+      prop-types "^15.7.2"
+      react-is "^16.9.0"
+  
   react-refresh@^0.11.0:
     version "0.11.0"
     resolved "https://registry.npmmirror.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"
@@ -10227,6 +10659,49 @@ Lockfile:
     version "0.4.3"
     resolved "https://registry.npmmirror.com/react-refresh/-/react-refresh-0.4.3.tgz#966f1750c191672e76e16c2efa569150cc73ab53"
     integrity sha512-Hwln1VNuGl/6bVwnd0Xdn1e84gT/8T9aYNL+HAKDArLCS7LWjwr7StE30IEYbIkx0Vi3vs+coQxe+SQDbGbbpA==
+  
+  react-router-dom@^4.1.2:
+    version "4.3.1"
+    resolved "https://registry.npmmirror.com/react-router-dom/-/react-router-dom-4.3.1.tgz#4c2619fc24c4fa87c9fd18f4fb4a43fe63fbd5c6"
+    integrity sha512-c/MlywfxDdCp7EnB7YfPMOfMD3tOtIjrQlj/CKfNMBxdmpJP8xcz5P/UAFn3JbnQCNUxsHyVVqllF9LhgVyFCA==
+    dependencies:
+      history "^4.7.2"
+      invariant "^2.2.4"
+      loose-envify "^1.3.1"
+      prop-types "^15.6.1"
+      react-router "^4.3.1"
+      warning "^4.0.1"
+  
+  react-router-redux@5.0.0-alpha.9:
+    version "5.0.0-alpha.9"
+    resolved "https://registry.npmmirror.com/react-router-redux/-/react-router-redux-5.0.0-alpha.9.tgz#825431516e0e6f1fd93b8807f6bd595e23ec3d10"
+    integrity sha512-euSgNIANnRXr4GydIuwA7RZCefrLQzIw5WdXspS8NPYbV+FxrKSS9MKG7U9vb6vsKHONnA4VxrVNWfnMUnUQAw==
+    dependencies:
+      history "^4.7.2"
+      prop-types "^15.6.0"
+      react-router "^4.2.0"
+  
+  react-router@^4.2.0, react-router@^4.3.1:
+    version "4.3.1"
+    resolved "https://registry.npmmirror.com/react-router/-/react-router-4.3.1.tgz#aada4aef14c809cb2e686b05cee4742234506c4e"
+    integrity sha512-yrvL8AogDh2X42Dt9iknk4wF4V8bWREPirFfS9gLU1huk6qK41sg7Z/1S81jjTrGHxa3B8R3J6xIkDAA6CVarg==
+    dependencies:
+      history "^4.7.2"
+      hoist-non-react-statics "^2.5.0"
+      invariant "^2.2.4"
+      loose-envify "^1.3.1"
+      path-to-regexp "^1.7.0"
+      prop-types "^15.6.1"
+      warning "^4.0.1"
+  
+  react@^16.13.1:
+    version "16.14.0"
+    resolved "https://registry.npmmirror.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
+    integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==
+    dependencies:
+      loose-envify "^1.1.0"
+      object-assign "^4.1.1"
+      prop-types "^15.6.2"
   
   react@^18.0.0:
     version "18.2.0"
@@ -10298,6 +10773,28 @@ Lockfile:
       indent-string "^4.0.0"
       strip-indent "^3.0.0"
   
+  redux-saga@^0.16.0:
+    version "0.16.2"
+    resolved "https://registry.npmmirror.com/redux-saga/-/redux-saga-0.16.2.tgz#993662e86bc945d8509ac2b8daba3a8c615cc971"
+    integrity sha512-iIjKnRThI5sKPEASpUvySemjzwqwI13e3qP7oLub+FycCRDysLSAOwt958niZW6LhxfmS6Qm1BzbU70w/Koc4w==
+  
+  "redux@>= 3.7.2":
+    version "4.2.1"
+    resolved "https://registry.npmmirror.com/redux/-/redux-4.2.1.tgz#c08f4306826c49b5e9dc901dee0452ea8fce6197"
+    integrity sha512-LAUYz4lc+Do8/g7aeRa8JkyDErK6ekstQaqWQrNRW//MY1TvCEpMtpTWvlQ+FPbWCx+Xixu/6SHt5N0HR+SB4w==
+    dependencies:
+      "@babel/runtime" "^7.9.2"
+  
+  redux@^3.7.1, redux@^3.7.2:
+    version "3.7.2"
+    resolved "https://registry.npmmirror.com/redux/-/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
+    integrity sha512-pNqnf9q1hI5HHZRBkj3bAngGZW/JMCmexDlOxw4XagXY2o1327nHH54LoTjiPJ0gizoqPDRqWyX/00g0hD6w+A==
+    dependencies:
+      lodash "^4.2.1"
+      lodash-es "^4.2.1"
+      loose-envify "^1.1.0"
+      symbol-observable "^1.0.3"
+  
   reflect.getprototypeof@^1.0.4:
     version "1.0.4"
     resolved "https://registry.npmmirror.com/reflect.getprototypeof/-/reflect.getprototypeof-1.0.4.tgz#aaccbf41aca3821b87bb71d9dcbc7ad0ba50a3f3"
@@ -10322,7 +10819,7 @@ Lockfile:
     resolved "https://registry.npmmirror.com/regenerate/-/regenerate-1.4.2.tgz#b9346d8827e8f5a32f7ba29637d398b69014848a"
     integrity sha512-zrceR/XhGYU/d/opr2EKO7aRHUeiBI8qjtfHqADTwZd6Szfy16la6kqD0MIUs5z5hx6AaKa+PixpPrR289+I0A==
   
-  regenerator-runtime@0.11:
+  regenerator-runtime@0.11, regenerator-runtime@^0.11.0, regenerator-runtime@^0.11.1:
     version "0.11.1"
     resolved "https://registry.npmmirror.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
     integrity sha512-MguG95oij0fC3QV3URf4V2SDYGJhJnJGqvIIgdECeODCT98wSWDAJ94SSuVpYQUoTcGUIL6L4yNB7j1DFFHSBg==
@@ -10412,7 +10909,7 @@ Lockfile:
     resolved "https://registry.npmmirror.com/replace-ext/-/replace-ext-1.0.1.tgz#2d6d996d04a15855d967443631dd5f77825b016a"
     integrity sha512-yD5BHCe7quCgBph4rMQ+0KkIRKwWCrHDOX1p1Gp6HwjPM5kVoCdKGNhN7ydqqsX6lJEnQDKZ/tFMiEdQ1dvPEw==
   
-  request@^2.88.0:
+  request@^2.88.0, request@^2.88.2:
     version "2.88.2"
     resolved "https://registry.npmmirror.com/request/-/request-2.88.2.tgz#d73c918731cb5a87da047e207234146f664d12b3"
     integrity sha512-MsvtOrfG9ZcrOwAW+Qi+F6HbD0CWXEh9ou77uOb7FM2WPhwT7smM833PzanhJLsgXjN89Ir6V2PczXNnMpwKhw==
@@ -10452,14 +10949,6 @@ Lockfile:
     version "2.0.1"
     resolved "https://registry.npmmirror.com/require-package-name/-/require-package-name-2.0.1.tgz#c11e97276b65b8e2923f75dabf5fb2ef0c3841b9"
     integrity sha512-uuoJ1hU/k6M0779t3VMVIYpb2VMJk05cehCaABFhXaibcbvfgR8wKiozLjVFSzJPmQMRqIcO0HMyTFqfV09V6Q==
-  
-  require@^2.4.20:
-    version "2.4.20"
-    resolved "https://registry.npmmirror.com/require/-/require-2.4.20.tgz#66cb6baaabb65de8a71d793f5c65fd184f3798b6"
-    integrity sha512-7eop5rvh38qhQQQOoUyf68meVIcxT2yFySNywTbxoEECgkX4KDqqDRaEszfvFnuB3fuZVjDdJZ1TI/Esr16RRA==
-    dependencies:
-      std "0.1.40"
-      uglify-js "2.3.0"
   
   requires-port@^1.0.0:
     version "1.0.0"
@@ -10689,6 +11178,14 @@ Lockfile:
     integrity sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==
     dependencies:
       xmlchars "^2.2.0"
+  
+  scheduler@^0.19.1:
+    version "0.19.1"
+    resolved "https://registry.npmmirror.com/scheduler/-/scheduler-0.19.1.tgz#4f3e2ed2c1a7d65681f4c854fa8c5a1ccb40f196"
+    integrity sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA==
+    dependencies:
+      loose-envify "^1.1.0"
+      object-assign "^4.1.1"
   
   scheduler@^0.21.0:
     version "0.21.0"
@@ -11043,13 +11540,6 @@ Lockfile:
     resolved "https://registry.npmmirror.com/source-map/-/source-map-0.7.4.tgz#a9bbe705c9d8846f4e08ff6765acf0f1b0898656"
     integrity sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==
   
-  source-map@~0.1.7:
-    version "0.1.43"
-    resolved "https://registry.npmmirror.com/source-map/-/source-map-0.1.43.tgz#c24bc146ca517c1471f5dacbe2571b2b7f9e3346"
-    integrity sha512-VtCvB9SIQhk3aF6h+N85EaqIaBFIAfZ9Cu+NJHHVvc8BbEcnvDcFw6sqQ2dQrT6SlOrZq3tIvyD9+EGq/lJryQ==
-    dependencies:
-      amdefine ">=0.0.4"
-  
   spdx-correct@^3.0.0:
     version "3.2.0"
     resolved "https://registry.npmmirror.com/spdx-correct/-/spdx-correct-3.2.0.tgz#4f5ab0668f0059e34f9c00dce331784a12de4e9c"
@@ -11129,6 +11619,16 @@ Lockfile:
       safer-buffer "^2.0.2"
       tweetnacl "~0.14.0"
   
+  ssr-window@^1.0.1:
+    version "1.0.1"
+    resolved "https://registry.npmmirror.com/ssr-window/-/ssr-window-1.0.1.tgz#30752a6a4666e7767f0b7e6aa6fc2fdbd0d9b369"
+    integrity sha512-dgFqB+f00LJTEgb6UXhx0h+SrG50LJvti2yMKMqAgzfUmUXZrLSv2fjULF7AWGwK25EXu8+smLR3jYsJQChPsg==
+  
+  ssr-window@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.npmmirror.com/ssr-window/-/ssr-window-2.0.0.tgz#98c301aef99523317f8d69618f0010791096efc4"
+    integrity sha512-NXzN+/HPObKAx191H3zKlYomE5WrVIkoCB5IaSdvKokxTpjBdWfr0RaP+1Z5KOfDT0ZVz+2tdtiBkhsEQ9p+0A==
+  
   ssr-window@^3.0.0, ssr-window@^3.0.0-alpha.1:
     version "3.0.0"
     resolved "https://registry.npmmirror.com/ssr-window/-/ssr-window-3.0.0.tgz#fd5b82801638943e0cc704c4691801435af7ac37"
@@ -11165,11 +11665,6 @@ Lockfile:
     version "3.4.3"
     resolved "https://registry.npmmirror.com/std-env/-/std-env-3.4.3.tgz#326f11db518db751c83fd58574f449b7c3060910"
     integrity sha512-f9aPhy8fYBuMN+sNfakZV18U39PbalgjXG3lLB9WkaYTxijru61wb57V9wxxNthXM5Sd88ETBWi29qLAsHO52Q==
-  
-  std@0.1.40:
-    version "0.1.40"
-    resolved "https://registry.npmmirror.com/std/-/std-0.1.40.tgz#3678a5f65094d9e1b6b5e26edbfc0212b8342b71"
-    integrity sha512-wUf57hkDGCoVShrhPA8Q7lAg2Qosk+FaMlECmAsr1A4/rL2NRXFHQGBcgMUFKVkPEemJFW9gzjCQisRty14ohg==
   
   strict-uri-encode@^1.0.0:
     version "1.1.0"
@@ -11497,6 +11992,14 @@ Lockfile:
       picocolors "^1.0.0"
       stable "^0.1.8"
   
+  swiper@4.4.2:
+    version "4.4.2"
+    resolved "https://registry.npmmirror.com/swiper/-/swiper-4.4.2.tgz#3a35237cbf4870034784e158b4197b65b763d647"
+    integrity sha512-Vfl4Zw4Z7iZwUu5S11JeC7OSy4nwky29nkUulkmg8lIqcWla6UtOhdap0gkyJRYS+UJXki+GWQsbFM0SZRxZPQ==
+    dependencies:
+      dom7 "^2.1.2"
+      ssr-window "^1.0.1"
+  
   swiper@6.8.0:
     version "6.8.0"
     resolved "https://registry.npmmirror.com/swiper/-/swiper-6.8.0.tgz#61c850f49ba778e403f00a01fe0b768bd85d0d20"
@@ -11504,6 +12007,11 @@ Lockfile:
     dependencies:
       dom7 "^3.0.0"
       ssr-window "^3.0.0"
+  
+  symbol-observable@^1.0.3:
+    version "1.2.0"
+    resolved "https://registry.npmmirror.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
+    integrity sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==
   
   symbol-tree@^3.2.4:
     version "3.2.4"
@@ -11543,6 +12051,37 @@ Lockfile:
       readable-stream "^2.3.0"
       to-buffer "^1.1.1"
       xtend "^4.0.0"
+  
+  taro-skeleton@2.0.4:
+    version "2.0.4"
+    resolved "https://registry.npmmirror.com/taro-skeleton/-/taro-skeleton-2.0.4.tgz#e791f3a305f7b7067c2b8557450cd1aff55d4a84"
+    integrity sha512-ndPNZAr9UR+jHOUdalTCkG7H/W4jynCJGcR6GQgbSgGgoTqoV2fWYKZDVZS4Y1KVcWPXzNre3Zi+MxqVzS0AkQ==
+    dependencies:
+      "@tarojs/components" "3.0.11"
+      "@tarojs/router" "3.0.11"
+      "@tarojs/taro" "3.0.11"
+      "@tarojs/taro-alipay" "2.1.0"
+      "@tarojs/taro-h5" "3.0.11"
+      "@tarojs/taro-qq" "2.1.0"
+      "@tarojs/taro-quickapp" "2.1.0"
+      "@tarojs/taro-swan" "2.1.0"
+      "@tarojs/taro-tt" "2.1.0"
+      "@tarojs/taro-weapp" "2.1.0"
+      classnames "^2.2.6"
+      nerv-devtools "^1.5.7"
+      nervjs "^1.5.7"
+      react "^16.13.1"
+      react-dom "^16.13.1"
+  
+  taro-ui@3.0.0-alpha.3:
+    version "3.0.0-alpha.3"
+    resolved "https://registry.npmmirror.com/taro-ui/-/taro-ui-3.0.0-alpha.3.tgz#7ce26d71a47f7fbeed4aca6237696284787d3023"
+    integrity sha512-qLVP2/6zh01CbZFZUj2QuhbwtnOd7l1PSzd1Rjl1be1vyq819rFeHA1lApxYLXiw1zpM5v/Ywp7euB88LpQagg==
+    dependencies:
+      classnames "^2.2.6"
+      dayjs "^1.7.7"
+      lodash "^4.17.10"
+      prop-types "^15.7.2"
   
   terser-webpack-plugin@^5.1.3:
     version "5.3.9"
@@ -11622,6 +12161,16 @@ Lockfile:
     version "1.0.3"
     resolved "https://registry.npmmirror.com/tiny-case/-/tiny-case-1.0.3.tgz#d980d66bc72b5d5a9ca86fb7c9ffdb9c898ddd03"
     integrity sha512-Eet/eeMhkO6TX8mnUteS9zgPbUMQa4I6Kkp5ORiBD5476/m+PIRiumP5tmh5ioJpH7k51Kehawy2UDfsnxxY8Q==
+  
+  tiny-invariant@^1.0.2:
+    version "1.3.1"
+    resolved "https://registry.npmmirror.com/tiny-invariant/-/tiny-invariant-1.3.1.tgz#8560808c916ef02ecfd55e66090df23a4b7aa642"
+    integrity sha512-AD5ih2NlSssTCwsMznbvwMZpJ1cbhkGd2uueNxzv2jDlEeZdU04JQfRnggJQ8DrcVBGjAsCKwFBbDlVNtEMlzw==
+  
+  tiny-warning@^1.0.0:
+    version "1.0.3"
+    resolved "https://registry.npmmirror.com/tiny-warning/-/tiny-warning-1.0.3.tgz#94a30db453df4c643d0fd566060d60a875d84754"
+    integrity sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==
   
   tmp@^0.0.33:
     version "0.0.33"
@@ -11870,14 +12419,10 @@ Lockfile:
     dependencies:
       is-typedarray "^1.0.0"
   
-  uglify-js@2.3.0:
-    version "2.3.0"
-    resolved "https://registry.npmmirror.com/uglify-js/-/uglify-js-2.3.0.tgz#2cdec16d378a8a2b6ecfb6989784cf8b7ae5491f"
-    integrity sha512-AQvbxRKdaQeYADywQaao0k8Tj+7NGEVTne6xwgX1yQpv/G8b0CKdIw70HkCptwfvNGDsVe+0Bng3U9hfWbxxfg==
-    dependencies:
-      async "~0.2.6"
-      optimist "~0.3.5"
-      source-map "~0.1.7"
+  typescript@3.9.7:
+    version "3.9.7"
+    resolved "https://registry.npmmirror.com/typescript/-/typescript-3.9.7.tgz#98d600a5ebdc38f40cb277522f12dc800e9e25fa"
+    integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
   
   uglify-js@^3.5.1:
     version "3.17.4"
@@ -11908,6 +12453,11 @@ Lockfile:
     integrity sha512-42SD8NOQEhdYntEiUQdYq/1V/YHwr1HLwlHuTJB5InVVdOSbgI6xu8jK5q65yIzuFCfczzyDF/7hbGzVbyCw0g==
     dependencies:
       string.fromcodepoint "^0.2.1"
+  
+  unfetch@^4.1.0:
+    version "4.2.0"
+    resolved "https://registry.npmmirror.com/unfetch/-/unfetch-4.2.0.tgz#7e21b0ef7d363d8d9af0fb929a5555f6ef97a3be"
+    integrity sha512-F9p7yYCn6cIW9El1zi0HI6vqpeIvBsr3dSuRO6Xuppb1u5rXpCPmMvLSyECLhybr9isec8Ohl0hPekMVrEinDA==
   
   unicode-canonical-property-names-ecmascript@^2.0.0:
     version "2.0.0"
@@ -12031,7 +12581,7 @@ Lockfile:
     dependencies:
       prepend-http "^2.0.0"
   
-  url-parse@^1.5.3:
+  url-parse@^1.4.7, url-parse@^1.5.3:
     version "1.5.10"
     resolved "https://registry.npmmirror.com/url-parse/-/url-parse-1.5.10.tgz#9d3c2f736c1d75dd3bd2be507dcc111f1e2ea9c1"
     integrity sha512-WypcfiRhfeUP9vvF0j6rw0J3hrWrw6iZv3+22h6iRMJ/8z1Tj6XfLP4DsUix5MhMPnXpiHDoKyoZ/bdCkwBCiQ==
@@ -12102,6 +12652,11 @@ Lockfile:
     integrity sha512-YuKoXDAhBYxY7SfOKxHBDoSyENFeW5VvIIQp2TGQuit8gpK6MnWaQelBKxso72DoxTZfZdcP3W90LqpSkgPzLQ==
     dependencies:
       builtins "^5.0.0"
+  
+  value-equal@^1.0.1:
+    version "1.0.1"
+    resolved "https://registry.npmmirror.com/value-equal/-/value-equal-1.0.1.tgz#1e0b794c734c5c0cade179c437d356d931a34d6c"
+    integrity sha512-NOJ6JZCAWr0zlxZt+xqCHNTEKOsrks2HQd4MqhP1qy4z1SkbEP467eNx6TgDKXMvUOb+OENfJCZwM+16n7fRfw==
   
   vary@~1.1.2:
     version "1.1.2"
@@ -12190,6 +12745,20 @@ Lockfile:
     integrity sha512-ts/8E8l5b7kY0vlWLewOkDXMmPdLcVV4GmOQLyxuSswIJsweeFZtAsMF7k1Nszz+TYBQrlYRmzOnr398y1JemQ==
     dependencies:
       makeerror "1.0.12"
+  
+  warning@^3.0.0:
+    version "3.0.0"
+    resolved "https://registry.npmmirror.com/warning/-/warning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"
+    integrity sha512-jMBt6pUrKn5I+OGgtQ4YZLdhIeJmObddh6CsibPxyQ5yPZm1XExSyzC1LCNX7BzhxWgiHmizBWJTHJIjMjTQYQ==
+    dependencies:
+      loose-envify "^1.0.0"
+  
+  warning@^4.0.1:
+    version "4.0.3"
+    resolved "https://registry.npmmirror.com/warning/-/warning-4.0.3.tgz#16e9e077eb8a86d6af7d64aa1e05fd85b4678ca3"
+    integrity sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==
+    dependencies:
+      loose-envify "^1.0.0"
   
   watchpack@^2.4.0:
     version "2.4.0"
@@ -12370,10 +12939,15 @@ Lockfile:
     dependencies:
       iconv-lite "0.6.3"
   
-  whatwg-fetch@^3.4.0:
+  whatwg-fetch@>=0.10.0, whatwg-fetch@^3.4.0:
     version "3.6.19"
     resolved "https://registry.npmmirror.com/whatwg-fetch/-/whatwg-fetch-3.6.19.tgz#caefd92ae630b91c07345537e67f8354db470973"
     integrity sha512-d67JP4dHSbm2TrpFj8AbO8DnL1JXL5J9u0Kq2xW6d0TFDbCA3Muhdt8orXC22utleTVj7Prqt82baN6RBvnEgw==
+  
+  whatwg-fetch@^2.0.4:
+    version "2.0.4"
+    resolved "https://registry.npmmirror.com/whatwg-fetch/-/whatwg-fetch-2.0.4.tgz#dde6a5df315f9d39991aa17621853d720b85566f"
+    integrity sha512-dcQ1GWpOD/eEQ97k66aiEVpNnapVj90/+R+SXTPYGHpYBBypfKJEQjLrvMZ7YXbKm21gXd4NcuxUTjiv1YtLng==
   
   whatwg-mimetype@^3.0.0:
     version "3.0.0"
@@ -12474,11 +13048,6 @@ Lockfile:
     integrity sha512-NsmoXalsWVDMGupxZ5R08ka9flZjjiLvHVAWYOKtiKM8ujtZWr9cRffak+uSE48+Ob8ObalXpwyeUiyDD6QFgg==
     dependencies:
       string-width "^4.0.0"
-  
-  wordwrap@~0.0.2:
-    version "0.0.3"
-    resolved "https://registry.npmmirror.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
-    integrity sha512-1tMA907+V4QmxV7dbRvb4/8MaRALK6q9Abid3ndMYnbyo8piisCmeONVqVSXqQA3KaP4SLt5b7ud6E2sqP8TFw==
   
   "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
     version "7.0.0"

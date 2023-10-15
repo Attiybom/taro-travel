@@ -44,7 +44,7 @@ router.post("/order", async (req, res) => {
 router.post("/getOrderList", async (req, res) => {
   try {
     const { userPhone } = req.body;
-    console.log("req.body", req.body);
+    // console.log("req.body", req.body);
     // desc：降序查询 asc：升序查询
     const sqlStr = `select * from order_list where userPhone=${userPhone} order by id desc`;
     const orderList = await sqlQuery(sqlStr);

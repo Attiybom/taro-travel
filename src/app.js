@@ -5,6 +5,9 @@ import "./app.scss";
 import createApp from "./dva";
 import models from "./models";
 
+// 支付宝promise-finally支持
+import 'promise-prototype-finally'
+
 import { Provider } from "react-redux";
 
 const dvaApp = createApp({

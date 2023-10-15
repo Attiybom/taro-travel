@@ -4,6 +4,9 @@ import path from "path";
 import devConfig from "./dev";
 import prodConfig from "./prod";
 
+// 获取当前客户端类型
+const TARO_ENV = process.env.TARO_ENV
+
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
 // eslint-disable-next-line no-unused-vars
 export default defineConfig(async (merge, { command, mode }) => {
@@ -18,7 +21,8 @@ export default defineConfig(async (merge, { command, mode }) => {
       828: 1.81 / 2,
     },
     sourceRoot: "src",
-    outputRoot: "dist",
+    // 编译输出的路径
+    outputRoot: `dist/${TARO_ENV}`,
     plugins: [],
     defineConstants: {},
     copy: {
